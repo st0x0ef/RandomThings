@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_pickaxe"
+  },
+  "addition": {
+    "item": "randomthings:upgraded_netherite_ingot"
+  },
+  "result": {
+    "item": "randomthings:upgraded_netherite_pickaxe"
+  }
+}

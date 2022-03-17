@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "randomthings:maple_log"
+    }
+  ],
+  "result": {
+    "item": "randomthings:maple_planks",
+    "count": 4
+  }
+}

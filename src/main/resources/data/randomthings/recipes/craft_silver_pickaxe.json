@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "XXX",
+    " l ",
+    " l "
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:silver_ingot"
+    },
+    "l":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:silver_pickaxe",
+    "count": 1
+  }
+}

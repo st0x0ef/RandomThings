@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:upgraded_netherite_ingot"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:upgraded_netherite_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "randomthings:silver_block",
+    "randomthings:raw_silver_block",
+    "randomthings:silver_ore",
+    "randomthings:silver_ore_deepslate",
+    "randomthings:andesite_brick",
+    "randomthings:diorite_brick",
+    "randomthings:granite_brick",
+    "randomthings:upgraded_netherite_block"
+  ]
+}

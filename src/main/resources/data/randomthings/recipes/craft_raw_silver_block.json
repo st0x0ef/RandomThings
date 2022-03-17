@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:raw_silver"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:raw_silver_block",
+    "count": 1
+  }
+}

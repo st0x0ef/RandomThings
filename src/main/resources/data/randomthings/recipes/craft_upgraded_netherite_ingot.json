@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "NNN",
+    "NXN",
+    "NNN"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    "N":
+    {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:upgraded_netherite_ingot",
+    "count": 1
+  }
+}

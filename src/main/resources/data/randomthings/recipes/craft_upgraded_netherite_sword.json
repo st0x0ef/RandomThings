@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "addition": {
+    "item": "randomthings:upgraded_netherite_ingot"
+  },
+  "result": {
+    "item": "randomthings:upgraded_netherite_sword"
+  }
+}
