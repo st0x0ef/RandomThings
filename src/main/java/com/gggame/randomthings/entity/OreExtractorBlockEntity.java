@@ -32,6 +32,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
+import java.util.Objects;
+import java.util.Random;
 
 public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
@@ -53,21 +55,21 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
         super(ModBlockEntities.ORE_EXTRACTOR.get(), pWorldPosition, pBlockState);
         this.data = new ContainerData() {
             public int get(int index) {
-                switch (index) {
-                    case 0: return OreExtractorBlockEntity.this.progress;
-                    case 1: return OreExtractorBlockEntity.this.maxProgress;
-                    case 2: return OreExtractorBlockEntity.this.fuelTime;
-                    case 3: return OreExtractorBlockEntity.this.maxFuelTime;
-                    default: return 0;
-                }
+                return switch (index) {
+                    case 0 -> OreExtractorBlockEntity.this.progress;
+                    case 1 -> OreExtractorBlockEntity.this.maxProgress;
+                    case 2 -> OreExtractorBlockEntity.this.fuelTime;
+                    case 3 -> OreExtractorBlockEntity.this.maxFuelTime;
+                    default -> 0;
+                };
             }
 
             public void set(int index, int value) {
-                switch(index) {
-                    case 0: OreExtractorBlockEntity.this.progress = value; break;
-                    case 1: OreExtractorBlockEntity.this.maxProgress = value; break;
-                    case 2: OreExtractorBlockEntity.this.fuelTime = value; break;
-                    case 3: OreExtractorBlockEntity.this.maxFuelTime = value; break;
+                switch (index) {
+                    case 0 -> OreExtractorBlockEntity.this.progress = value;
+                    case 1 -> OreExtractorBlockEntity.this.maxProgress = value;
+                    case 2 -> OreExtractorBlockEntity.this.fuelTime = value;
+                    case 3 -> OreExtractorBlockEntity.this.maxFuelTime = value;
                 }
             }
 
@@ -78,13 +80,13 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
     }
 
     @Override
-    public Component getDisplayName() {
+    public @NotNull Component getDisplayName() {
         return new TextComponent("Ore extractor");
     }
 
     @Nullable
     @Override
-    public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
+    public AbstractContainerMenu createMenu(int pContainerId, @NotNull Inventory pInventory, @NotNull Player pPlayer) {
         return new OreExtractorMenu(pContainerId, pInventory, this, this.data);
     }
 
@@ -120,7 +122,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
     }
 
     @Override
-    public void load(CompoundTag nbt) {
+    public void load(@NotNull CompoundTag nbt) {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
         progress = nbt.getInt("extractor.progress");
@@ -134,7 +136,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
             inventory.setItem(i, itemHandler.getStackInSlot(i));
         }
 
-        Containers.dropContents(this.level, this.worldPosition, inventory);
+        Containers.dropContents(Objects.requireNonNull(this.level), this.worldPosition, inventory);
     }
 
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, OreExtractorBlockEntity pBlockEntity) {
@@ -167,39 +169,46 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
     private static void craftItem(OreExtractorBlockEntity entity) {
         entity.itemHandler.extractItem(1, 1, false);
 
+        Random rand = new Random();
+        int qt = rand.nextInt((3 - 1) + 1) + 1;
+
+        while (entity.itemHandler.getStackInSlot(2).getCount() + qt > 64) {
+            qt--;
+        }
+
         if (recipeId(entity) == 0) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt));
             entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
         else if (recipeId(entity) == 1) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt));
             entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
 
         else if (recipeId(entity) == 2) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt));
             entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
         else if (recipeId(entity) == 3) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt));
             entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
 
         else if (recipeId(entity) == 4) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt));
             entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
         else if (recipeId(entity) == 5) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt));
             entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
 
         else if (recipeId(entity) == 6) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt));
             entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
         else if (recipeId(entity) == 7) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt));
             entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
 
@@ -217,9 +226,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
         if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_COPPER_ORE.asItem()) return true;
 
         if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.GOLD_ORE.asItem()) return true;
-        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_GOLD_ORE.asItem()) return true;
-
-        return false;
+        return entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_GOLD_ORE.asItem();
     }
 
     private static int recipeId(OreExtractorBlockEntity entity) {
