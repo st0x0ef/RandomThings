@@ -38,5 +38,7 @@
   "item.randomthings.upgraded_netherite_chestplate": "Plastron en netherite renforcer",
   "item.randomthings.upgraded_netherite_leggings": "Jambière en netherite renforcer",
   "item.randomthings.upgraded_netherite_boots": "Bottes en netherite renforcer",
-  "block.randomthings.upgraded_netherite_block": "Bloc de netherite renforcer"
+  "block.randomthings.upgraded_netherite_block": "Bloc de netherite renforcer",
+  "block.randomthings.cherry_sapling": "Pousse de cerisier",
+  "block.randomthings.maple_sapling": "Pousse d'érable"
 }

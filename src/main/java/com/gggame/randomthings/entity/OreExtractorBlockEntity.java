@@ -1,3 +1,4 @@
+
 package com.gggame.randomthings.entity;
 
 import com.gggame.randomthings.init.BlockInit;

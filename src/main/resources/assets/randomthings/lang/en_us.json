@@ -38,5 +38,7 @@
   "item.randomthings.upgraded_netherite_chestplate": "Upgraded netherite chestplate",
   "item.randomthings.upgraded_netherite_leggings": "Upgraded netherite leggings",
   "item.randomthings.upgraded_netherite_boots": "Upgraded netherite boots",
-  "block.randomthings.upgraded_netherite_block": "Upgraded netherite block"
+  "block.randomthings.upgraded_netherite_block": "Upgraded netherite block",
+  "block.randomthings.cherry_sapling": "Cherry sapling",
+  "block.randomthings.maple_sapling": "Maple sapling"
 }

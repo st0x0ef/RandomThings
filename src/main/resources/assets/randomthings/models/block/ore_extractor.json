@@ -1,10 +1,10 @@
 {
-	"parent": "ore_extractor",
+	"parent": "randomthings:ore_extractor",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "randomthings:customblock/ore_extractor1",
-		"1": "randomthings:customblock/ore_extractor2",
-		"2": "randomthings:customblock/ore_extractor3",
+		"0": "randomthings:block/ore_extractor1",
+		"1": "randomthings:block/ore_extractor2",
+		"2": "randomthings:block/ore_extractor3",
 		"3": "minecraft:block/stone",
 		"particle": "randomthings:customblock/ore_extractor3"
 	},

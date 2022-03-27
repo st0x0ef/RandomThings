@@ -1,6 +1,7 @@
 package com.gggame.randomthings.world;
 
 import com.gggame.randomthings.init.BlockInit;
+import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -21,12 +22,13 @@ public class OreGeneration {
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockInit.SILVER_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.SILVER_ORE_DEEPSLATE.get().defaultBlockState()));
 
-    public static final ConfiguredFeature<?, ?> SILVER_ORE = FeatureUtils.register("sivler_ore", Feature.ORE.configured(new OreConfiguration(OVERWORLD_SILVER_ORE, 5)));
-    public static final PlacedFeature SILVER_ORE_PLACED = PlacementUtils.register("silver_ore_placed", SILVER_ORE.placed(OrePlacement.commonOrePlacement(12,
-            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-40), VerticalAnchor.aboveBottom(100)))));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> SILVER_ORE = FeatureUtils.register("sivler_ore", Feature.ORE, new OreConfiguration(OVERWORLD_SILVER_ORE, 5));
+
+    public static final Holder<PlacedFeature> SILVER_ORE_PLACED = PlacementUtils.register("silver_ore_placed", SILVER_ORE, OrePlacement.commonOrePlacement(12,
+            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-40), VerticalAnchor.aboveBottom(100))));
 
     public static void generateOres(final BiomeLoadingEvent event) {
-        List<Supplier<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
-        base.add(() -> SILVER_ORE_PLACED);
+        List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
+        base.add(SILVER_ORE_PLACED);
     }
 }

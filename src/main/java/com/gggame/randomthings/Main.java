@@ -77,16 +77,23 @@ public class Main
 
     private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.ORE_EXTRACTOR.get(), RenderType.cutout());
+
         ItemBlockRenderTypes.setRenderLayer(BlockInit.CHERRY_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.MAPLE_LEAVES.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.CHERRY_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.MAPLE_SAPLING.get(), RenderType.cutout());
 
         MenuScreens.register(MenuTypes.ORE_EXTRACTOR_MENU.get(), OreExtractorScreen::new);
 
         WoodType.register(WoodTypeInit.CHERRY);
+        WoodType.register(WoodTypeInit.MAPLE);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             Sheets.addWoodType(WoodTypeInit.CHERRY);
+            Sheets.addWoodType(WoodTypeInit.MAPLE);
         });
     }
 }

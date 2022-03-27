@@ -14,7 +14,6 @@ public class MenuTypes {
 
     public static final RegistryObject<MenuType<OreExtractorMenu>> ORE_EXTRACTOR_MENU = registerMenuType(OreExtractorMenu::new, "ore_extractor_menu");
 
-
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));
     }
