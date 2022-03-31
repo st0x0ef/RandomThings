@@ -170,6 +170,55 @@ public class BlockInit {
             () -> new SaplingBlock(new MapleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
 
+    public static final RegistryObject<Block> DEGRADE_BLOCK_BLACK = register("degrade_block_black",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_BLUE = register("degrade_block_blue",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_BROWN = register("degrade_block_brown",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_CYAN = register("degrade_block_cyan",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_GRAY = register("degrade_block_gray",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_GREEN = register("degrade_block_green",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_LIGHT_BLUE = register("degrade_block_light_blue",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_LIGHT_GRAY = register("degrade_block_light_gray",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_LIME = register("degrade_block_lime",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_MAGENTA = register("degrade_block_magenta",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_ORANGE = register("degrade_block_orange",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_PINK = register("degrade_block_pink",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_PURPLE = register("degrade_block_purple",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_RED = register("degrade_block_red",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_WHITE = register("degrade_block_white",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> DEGRADE_BLOCK_YELLOW = register("degrade_block_yellow",
+            () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
 
     private static <T extends Block> RegistryObject<T> register(final String name, final Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
         RegistryObject<T> obj = BLOCKS.register(name, block);

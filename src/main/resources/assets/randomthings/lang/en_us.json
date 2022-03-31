@@ -40,5 +40,21 @@
   "item.randomthings.upgraded_netherite_boots": "Upgraded netherite boots",
   "block.randomthings.upgraded_netherite_block": "Upgraded netherite block",
   "block.randomthings.cherry_sapling": "Cherry sapling",
-  "block.randomthings.maple_sapling": "Maple sapling"
+  "block.randomthings.maple_sapling": "Maple sapling",
+  "block.randomthings.degrade_block_black": "Black degrade block",
+  "block.randomthings.degrade_block_blue": "Blue degrade block",
+  "block.randomthings.degrade_block_brown": "Brown degrade block",
+  "block.randomthings.degrade_block_cyan": "Cyan degrade block",
+  "block.randomthings.degrade_block_gray": "Gray degrade block",
+  "block.randomthings.degrade_block_green": "Green degrade block",
+  "block.randomthings.degrade_block_light_blue": "Light blue degrade block",
+  "block.randomthings.degrade_block_light_gray": "Light gray degrade block",
+  "block.randomthings.degrade_block_lime": "Lime degrade block",
+  "block.randomthings.degrade_block_magenta": "Magenta degrade block",
+  "block.randomthings.degrade_block_orange": "Orange degrade block",
+  "block.randomthings.degrade_block_pink": "Pink degrade block",
+  "block.randomthings.degrade_block_purple": "Purple degrade block",
+  "block.randomthings.degrade_block_red": "Red degrade block",
+  "block.randomthings.degrade_block_white": "White degrade block",
+  "block.randomthings.degrade_block_yellow": "Yellow degrade block"
 }

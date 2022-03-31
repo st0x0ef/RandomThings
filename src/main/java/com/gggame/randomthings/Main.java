@@ -28,7 +28,6 @@ public class Main
 {
     public static final String MOD_ID = "randomthings";
 
-
     public static final CreativeModeTab RANDOMTHINGS_TAB = new CreativeModeTab("randomthings_tab") {
         @Override
         @OnlyIn(Dist.CLIENT)
