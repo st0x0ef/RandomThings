@@ -1,8 +1,9 @@
 {
-  "itemGroup.randomthings_tab": "Random Things",
+  "itemGroup.randomthings_other_tab": "Random Things: other random things",
   "itemGroup.randomthings_tool_and_armor_tab": "Random Things : tool and armor",
   "itemGroup.randomthings_decoration_tab": "Random Things : decoration",
   "itemGroup.randomthings_ore_tab": "Random Things : ore",
+  "itemGroup.randomthings_food_tab": "Random Things: food",
   "item.randomthings.silver_ingot": "Silver ingot",
   "item.randomthings.raw_silver": "Raw silver",
   "block.randomthings.silver_block": "Block of silver",
@@ -56,5 +57,20 @@
   "block.randomthings.degrade_block_purple": "Purple degrade block",
   "block.randomthings.degrade_block_red": "Red degrade block",
   "block.randomthings.degrade_block_white": "White degrade block",
-  "block.randomthings.degrade_block_yellow": "Yellow degrade block"
+  "block.randomthings.degrade_block_yellow": "Yellow degrade block",
+  "item.randomthings.maple_syrup_bottle": "Maple syrup bottle",
+  "item.randomthings.maple_water_bottle": "Maple water bottle",
+  "block.randomthings.sap_spout": "Sap spout",
+  "block.randomthings.erbium_ore": "Erbium ore",
+  "block.randomthings.nether_erbium_ore": "Nether erbium ore",
+  "block.randomthings.erbium_ore_deepslate": "Erbium ore deepslate",
+  "item.randomthings.erbium_gem": "Erbium gem",
+  "item.randomthings.nether_erbium_gem": "Nether erbium gem",
+  "item.randomthings.erbium_ring": "Erbium ring",
+  "item.randomthings.upgraded_erbium_ring": "Upgraded erbium ring",
+  "block.randomthings.erbium_block": "Erbium block",
+  "block.randomthings.nether_erbium_block": "Nether erbium block",
+  "tooltip.randomthings.shift": "§lSHIFT§r for more information",
+  "tooltip.randomthings.erbium_ring": "Removes all effect of potions, removes the effects of fire and restores one point of life",
+  "tooltip.randomthings.nether_erbium_ring": "Removes bad effect of potions, removes the effects of fire and restores two points of life"
 }

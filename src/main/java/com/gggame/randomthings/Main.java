@@ -28,7 +28,7 @@ public class Main
 {
     public static final String MOD_ID = "randomthings";
 
-    public static final CreativeModeTab RANDOMTHINGS_TAB = new CreativeModeTab("randomthings_tab") {
+    public static final CreativeModeTab RANDOMTHINGS_OTHER_TAB = new CreativeModeTab("randomthings_other_tab") {
         @Override
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
@@ -53,11 +53,16 @@ public class Main
         @Override
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(BlockInit.SILVER_ORE.get().asItem());
+            return new ItemStack(BlockInit.ERBIUM_ORE.get().asItem());
         }
     };
-
-
+    public static final CreativeModeTab RANDOMTHINGS_FOOD_TAB = new CreativeModeTab("randomthings_food_tab") {
+        @Override
+        @OnlyIn(Dist.CLIENT)
+        public ItemStack makeIcon() {
+            return new ItemStack(ItemInit.MAPLE_SYRUP_BOTTLE.get());
+        }
+    };
 
     public Main() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -76,6 +81,8 @@ public class Main
 
     private void clientSetup(final FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(BlockInit.ORE_EXTRACTOR.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(BlockInit.SAP_SPOUT.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlockInit.CHERRY_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlockInit.MAPLE_LEAVES.get(), RenderType.cutout());

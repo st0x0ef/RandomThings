@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "randomthings:block/degrade_block_brownk"
+      "model": "randomthings:block/degrade_block_brown"
     }
   }
 }

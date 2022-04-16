@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " X ",
+    "X X",
+    " X "
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:erbium_gem"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:erbium_ring",
+    "count": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " X ",
+    "XRX",
+    " X "
+  ],
+  "key":
+  {
+    "R":
+    {
+      "item": "randomthings:erbium_ring"
+    },
+    "X":
+    {
+      "item": "randomthings:nether_erbium_gem"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:upgraded_erbium_ring",
+    "count": 1
+  }
+}

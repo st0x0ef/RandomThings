@@ -7,11 +7,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Main.MOD_ID)
-public class Event {
+public class ServerEvent {
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
         TreeGeneration.generateTrees(event);
         OreGeneration.generateOres(event);
     }
-
 }

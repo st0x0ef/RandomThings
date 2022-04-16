@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "randomthings:nether_erbium_ore"
+  },
+  "result": "randomthings:nether_erbium_gem",
+  "experience": 2,
+  "cookingtime": 400
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "randomthings:maple_water_bottle"
+  },
+  "result": "randomthings:maple_syrup_bottle",
+  "experience": 10,
+  "cookingtime": 200
+}

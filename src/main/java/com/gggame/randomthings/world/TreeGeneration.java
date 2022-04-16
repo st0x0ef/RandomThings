@@ -11,7 +11,6 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 import java.util.List;
 import java.util.Set;
-import java.util.function.Supplier;
 
 public class TreeGeneration {
     public static void generateTrees(final BiomeLoadingEvent event) {

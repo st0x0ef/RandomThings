@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "randomthings:block/sap_spout", "y": 180},
+    "facing=east": { "model": "randomthings:block/sap_spout", "y": 270},
+    "facing=south": { "model": "randomthings:block/sap_spout"},
+    "facing=west": { "model": "randomthings:block/sap_spout", "y": 90}
+  }
+}

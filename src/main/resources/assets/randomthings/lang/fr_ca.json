@@ -1,8 +1,9 @@
 {
-  "itemGroup.randomthings_tab": "Random Things",
+  "itemGroup.randomthings_other_tab": "Random Things: autre truc random",
   "itemGroup.randomthings_tool_and_armor_tab": "Random Things : outil et armure",
   "itemGroup.randomthings_decoration_tab": "Random Things : décoration",
   "itemGroup.randomthings_ore_tab": "Random Things : minerai",
+  "itemGroup.randomthings_food_tab": "Random Things: nourriture",
   "item.randomthings.silver_ingot": "Lingot d'argent",
   "item.randomthings.raw_silver": "Argent brut",
   "block.randomthings.silver_block": "Bloc d'argent",
@@ -56,5 +57,20 @@
   "block.randomthings.degrade_block_purple": "Bloc dégradé mauve",
   "block.randomthings.degrade_block_red": "Bloc dégradé rouge",
   "block.randomthings.degrade_block_white": "Bloc dégradé blanc",
-  "block.randomthings.degrade_block_yellow": "Bloc dégradé jaune"
+  "block.randomthings.degrade_block_yellow": "Bloc dégradé jaune",
+  "item.randomthings.maple_syrup_bottle": "Sirop d'érable en bouteille",
+  "item.randomthings.maple_water_bottle": "Eau d'érable en bouteille",
+  "block.randomthings.sap_spout": "Chalumeaux",
+  "block.randomthings.erbium_ore": "Minerai d'erbium",
+  "block.randomthings.nether_erbium_ore": "Minerai d'erbium du nether",
+  "block.randomthings.erbium_ore_deepslate": "Minerai d'erbium de profondoise",
+  "item.randomthings.erbium_gem": "Gemme d'erbium",
+  "item.randomthings.nether_erbium_gem": "Gemme d'erbium du nether",
+  "item.randomthings.erbium_ring": "Anneau en erbium",
+  "item.randomthings.upgraded_erbium_ring": "Anneau en erbium améliorer",
+  "block.randomthings.erbium_block": "Block d'erbium",
+  "block.randomthings.nether_erbium_block": "Block d'erbium du nether",
+  "tooltip.randomthings.shift": "§lSHIFT§r pour plus d'information",
+  "tooltip.randomthings.erbium_ring": "Supprime l'effet des potions, supprime les effets du feu et redonne un point de vie.",
+  "tooltip.randomthings.nether_erbium_ring": "Supprime l'effet des potions négative, supprime les effets du feu et redonne deux points de vie."
 }

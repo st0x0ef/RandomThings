@@ -8,6 +8,11 @@
     "randomthings:andesite_brick",
     "randomthings:diorite_brick",
     "randomthings:granite_brick",
-    "randomthings:upgraded_netherite_block"
+    "randomthings:upgraded_netherite_block",
+    "randomthings:erbium_ore",
+    "randomthings:erbium_ore_deepslate",
+    "randomthings:erbium_block",
+    "randomthings:nether_erbium_block",
+    "randomthings:nether_erbium_ore"
   ]
 }

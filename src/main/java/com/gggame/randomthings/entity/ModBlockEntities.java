@@ -12,4 +12,6 @@ public class ModBlockEntities {
 
     public static final RegistryObject<BlockEntityType<OreExtractorBlockEntity>> ORE_EXTRACTOR = BLOCK_ENTITIES.register("ore_extractor",
             () -> BlockEntityType.Builder.of(OreExtractorBlockEntity::new, BlockInit.ORE_EXTRACTOR.get()).build(null));
+    public static final RegistryObject<BlockEntityType<SapSpoutBlockEntity>> SAP_SPOUT = BLOCK_ENTITIES.register("sap_spout",
+            () -> BlockEntityType.Builder.of(SapSpoutBlockEntity::new, BlockInit.SAP_SPOUT.get()).build(null));
 }
