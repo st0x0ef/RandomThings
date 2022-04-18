@@ -60,7 +60,7 @@
   "block.randomthings.degrade_block_yellow": "Bloc dégradé jaune",
   "item.randomthings.maple_syrup_bottle": "Sirop d'érable en bouteille",
   "item.randomthings.maple_water_bottle": "Eau d'érable en bouteille",
-  "block.randomthings.sap_spout": "Chalumeaux",
+  "item.randomthings.sap_spout": "Chalumeaux",
   "block.randomthings.erbium_ore": "Minerai d'erbium",
   "block.randomthings.nether_erbium_ore": "Minerai d'erbium du nether",
   "block.randomthings.erbium_ore_deepslate": "Minerai d'erbium de profondoise",
@@ -72,5 +72,11 @@
   "block.randomthings.nether_erbium_block": "Block d'erbium du nether",
   "tooltip.randomthings.shift": "§lSHIFT§r pour plus d'information",
   "tooltip.randomthings.erbium_ring": "Supprime l'effet des potions, supprime les effets du feu et redonne un point de vie.",
-  "tooltip.randomthings.nether_erbium_ring": "Supprime l'effet des potions négative, supprime les effets du feu et redonne deux points de vie."
+  "tooltip.randomthings.nether_erbium_ring": "Supprime l'effet des potions négative, supprime les effets du feu et redonne deux points de vie.",
+  "item.randomthings.erbium_crystal": "Cystal en erbium",
+  "item.minecraft.potion.effect.erbium_potion": "Potion d'erbium",
+  "item.minecraft.splash_potion.effect.erbium_potion": "Potion jetable d'erbium",
+  "item.minecraft.lingering_potion.effect.erbium_potion": "Potion d'erbium persistante",
+  "effect.randomthings.clear_effect": "Destructeur d'effet",
+  "tooltip.randomthings.sap_spout": "Recueillir l'eau d'érable"
 }

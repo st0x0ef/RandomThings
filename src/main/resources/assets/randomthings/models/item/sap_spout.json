@@ -1,3 +1,6 @@
 {
-  "parent": "randomthings:block/sap_spout"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "randomthings:item/sap_spout"
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "randomthings:erbium_gem"
+    }
+  ],
+  "result": {
+    "item": "randomthings:erbium_crystal",
+    "count": 3
+  }
+}

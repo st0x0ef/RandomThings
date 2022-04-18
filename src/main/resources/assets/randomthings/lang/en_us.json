@@ -60,7 +60,7 @@
   "block.randomthings.degrade_block_yellow": "Yellow degrade block",
   "item.randomthings.maple_syrup_bottle": "Maple syrup bottle",
   "item.randomthings.maple_water_bottle": "Maple water bottle",
-  "block.randomthings.sap_spout": "Sap spout",
+  "item.randomthings.sap_spout": "Sap spout",
   "block.randomthings.erbium_ore": "Erbium ore",
   "block.randomthings.nether_erbium_ore": "Nether erbium ore",
   "block.randomthings.erbium_ore_deepslate": "Erbium ore deepslate",
@@ -72,5 +72,11 @@
   "block.randomthings.nether_erbium_block": "Nether erbium block",
   "tooltip.randomthings.shift": "§lSHIFT§r for more information",
   "tooltip.randomthings.erbium_ring": "Removes all effect of potions, removes the effects of fire and restores one point of life",
-  "tooltip.randomthings.nether_erbium_ring": "Removes bad effect of potions, removes the effects of fire and restores two points of life"
+  "tooltip.randomthings.nether_erbium_ring": "Removes bad effect of potions, removes the effects of fire and restores two points of life",
+  "item.randomthings.erbium_crystal": "Erbium crystal",
+  "item.minecraft.potion.effect.erbium_potion": "Erbium potion",
+  "item.minecraft.splash_potion.effect.erbium_potion": "Splash erbium potion",
+  "item.minecraft.lingering_potion.effect.erbium_potion": "Lingering erbium potion",
+  "effect.randomthings.clear_effect": "Clear effect",
+  "tooltip.randomthings.sap_spout": "Get maple water"
 }

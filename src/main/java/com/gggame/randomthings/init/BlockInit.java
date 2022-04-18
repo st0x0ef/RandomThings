@@ -1,7 +1,6 @@
 package com.gggame.randomthings.init;
 
 import com.gggame.randomthings.Main;
-import com.gggame.randomthings.customblock.SapSpoutBlock;
 import com.gggame.randomthings.customblock.OreExtractorBlock;
 import com.gggame.randomthings.world.tree.CherryTreeGrower;
 import com.gggame.randomthings.world.tree.MapleTreeGrower;
@@ -220,10 +219,6 @@ public class BlockInit {
     public static final RegistryObject<Block> DEGRADE_BLOCK_YELLOW = register("degrade_block_yellow",
             () -> new Block(BlockBehaviour.Properties.of(Material.DECORATION, MaterialColor.COLOR_BLACK).strength(1f)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
-
-    public static final RegistryObject<Block> SAP_SPOUT = register("sap_spout",
-            () -> new SapSpoutBlock(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_GRAY).strength(2f).sound(SoundType.METAL).noCollission().noOcclusion()),
-            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB)));
 
     public static final RegistryObject<Block> ERBIUM_ORE = register("erbium_ore",
             () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(5f).explosionResistance(3.5f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(4,9)),

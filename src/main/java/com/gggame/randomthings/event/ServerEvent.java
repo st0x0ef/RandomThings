@@ -1,5 +1,6 @@
-package com.gggame.randomthings;
+package com.gggame.randomthings.event;
 
+import com.gggame.randomthings.Main;
 import com.gggame.randomthings.world.OreGeneration;
 import com.gggame.randomthings.world.TreeGeneration;
 import net.minecraftforge.event.world.BiomeLoadingEvent;

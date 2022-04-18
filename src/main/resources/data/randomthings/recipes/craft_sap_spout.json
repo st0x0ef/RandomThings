@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "XXX",
+    " B "
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:silver_ingot"
+    },
+    "B":
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:sap_spout",
+    "count": 1
+  }
+}

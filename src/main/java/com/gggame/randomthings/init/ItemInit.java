@@ -3,6 +3,7 @@ package com.gggame.randomthings.init;
 
 import com.gggame.randomthings.Main;
 import com.gggame.randomthings.customitem.ErbiumRingItem;
+import com.gggame.randomthings.customitem.SapSpoutItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -70,6 +71,10 @@ public class ItemInit {
     public static final RegistryObject<Item> NETHER_ERBIUM_GEM = register("nether_erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
     public static final RegistryObject<Item> ERBIUM_RING = register("erbium_ring", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(20).rarity(Rarity.UNCOMMON), false));
     public static final RegistryObject<Item> UPGRADED_ERBIUM_RING = register("upgraded_erbium_ring", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(80).rarity(Rarity.UNCOMMON), true));
+
+    public static final RegistryObject<Item> ERBIUM_CRYSTAL = register("erbium_crystal", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+
+    public static final RegistryObject<Item> SAP_SPOUT = register("sap_spout", () -> new SapSpoutItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(12)));
 
     private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
         return ITEMS.register(name, item);
