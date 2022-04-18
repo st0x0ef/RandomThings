@@ -3,23 +3,23 @@
   "pattern":
   [
     "X X",
-    " X ",
-    " B "
+    "XRX",
+    "XXX"
   ],
   "key":
   {
     "X":
     {
-      "item": "randomthings:silver_ingot"
+      "item": "randomthings:erbium_gem"
     },
-    "B":
+    "R":
     {
-      "item": "minecraft:glass_bottle"
+      "item": "randomthings:erbium_ring"
     }
   },
   "result":
   {
-    "item": "randomthings:sap_spout",
+    "item": "randomthings:erbium_chestplate",
     "count": 1
   }
 }

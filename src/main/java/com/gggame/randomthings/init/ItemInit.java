@@ -76,6 +76,31 @@ public class ItemInit {
 
     public static final RegistryObject<Item> SAP_SPOUT = register("sap_spout", () -> new SapSpoutItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(12)));
 
+    public static final RegistryObject<Item> ERBIUM_HELMET = register("erbium_helmet",
+            () -> new ModArmorItem(BaseArmorMaterial.ERBIUM, EquipmentSlot.HEAD,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> ERBIUM_CHESTPLATE = register("erbium_chestplate",
+            () -> new ArmorItem(BaseArmorMaterial.ERBIUM, EquipmentSlot.CHEST,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> ERBIUM_LEGGINGS = register("erbium_leggings",
+            () -> new ArmorItem(BaseArmorMaterial.ERBIUM, EquipmentSlot.LEGS,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> ERBIUM_BOOTS = register("erbium_boots",
+            () -> new ArmorItem(BaseArmorMaterial.ERBIUM, EquipmentSlot.FEET,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> NETHER_ERBIUM_HELMET = register("nether_erbium_helmet",
+            () -> new ModArmorItem(BaseArmorMaterial.NETHER_ERBIUM, EquipmentSlot.HEAD,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> NETHER_ERBIUM_CHESTPLATE = register("nether_erbium_chestplate",
+            () -> new ArmorItem(BaseArmorMaterial.NETHER_ERBIUM, EquipmentSlot.CHEST,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> NETHER_ERBIUM_LEGGINGS = register("nether_erbium_leggings",
+            () -> new ArmorItem(BaseArmorMaterial.NETHER_ERBIUM, EquipmentSlot.LEGS,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> NETHER_ERBIUM_BOOTS = register("nether_erbium_boots",
+            () -> new ArmorItem(BaseArmorMaterial.NETHER_ERBIUM, EquipmentSlot.FEET,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+
     private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
         return ITEMS.register(name, item);
     }

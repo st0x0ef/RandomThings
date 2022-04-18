@@ -78,5 +78,13 @@
   "item.minecraft.splash_potion.effect.erbium_potion": "Splash erbium potion",
   "item.minecraft.lingering_potion.effect.erbium_potion": "Lingering erbium potion",
   "effect.randomthings.clear_effect": "Clear effect",
-  "tooltip.randomthings.sap_spout": "Get maple water"
+  "tooltip.randomthings.sap_spout": "Get maple water, 12 use",
+  "item.randomthings.erbium_helmet": "Erbium helmet",
+  "item.randomthings.erbium_chestplate": "Erbium chestplate",
+  "item.randomthings.erbium_leggings": "Erbium leggings",
+  "item.randomthings.erbium_boots": "Erbium boots",
+  "item.randomthings.nether_erbium_helmet": "Nether erbium helmet",
+  "item.randomthings.nether_erbium_chestplate": "Nether erbium chestplate",
+  "item.randomthings.nether_erbium_leggings": "Nether erbium leggings",
+  "item.randomthings.nether_erbium_boots": "Nether erbium boots"
 }

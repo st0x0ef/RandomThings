@@ -11,12 +11,20 @@ import net.minecraftforge.common.util.Lazy;
 import java.util.function.Supplier;
 
 public enum BaseArmorMaterial implements ArmorMaterial {
-    SILVER("silver", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
+    SILVER("silver", 15, new int[]{2, 5, 6, 2}, 6, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> {
         return Ingredient.of(ItemInit.SILVER_INGOT.get());
     }),
-    UPGRADED_NETHERITE("upgraded_netherite", 45, new int[]{3, 6, 8, 3}, 9, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.2F, () -> {
+    UPGRADED_NETHERITE("upgraded_netherite", 45, new int[]{3, 6, 8, 3}, 12, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.2F, () -> {
         return Ingredient.of(ItemInit.UPGRADED_NETHERITE_INGOT.get());
+    }),
+    ERBIUM("erbium", 35, new int[]{4, 7, 9, 4}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0F, () -> {
+        return Ingredient.of(ItemInit.ERBIUM_GEM.get());
+    }),
+    NETHER_ERBIUM("nether_erbium", 50, new int[]{6, 9, 11, 5}, 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.5F, 0.3F, () -> {
+        return Ingredient.of(ItemInit.NETHER_ERBIUM_GEM.get());
     });
+
+
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
