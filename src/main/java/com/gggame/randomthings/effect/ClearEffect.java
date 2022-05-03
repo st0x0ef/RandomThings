@@ -6,7 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class ClearEffect extends MobEffect {
     public ClearEffect(MobEffectCategory p_19451_, int p_19452_) {
-        super (MobEffectCategory.NEUTRAL, 285949);
+        super (MobEffectCategory.NEUTRAL, 1599175);
     }
 
     @Override

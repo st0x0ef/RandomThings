@@ -77,6 +77,7 @@
   "item.minecraft.potion.effect.erbium_potion": "Potion d'erbium",
   "item.minecraft.splash_potion.effect.erbium_potion": "Potion jetable d'erbium",
   "item.minecraft.lingering_potion.effect.erbium_potion": "Potion d'erbium persistante",
+  "item.minecraft.tipped_arrow.effect.erbium_potion": "Fleche d'erbium",
   "effect.randomthings.clear_effect": "Destructeur d'effet",
   "tooltip.randomthings.sap_spout": "Recueillir l'eau d'érable, 12 utilisations",
   "item.randomthings.erbium_helmet": "Casque en erbium",

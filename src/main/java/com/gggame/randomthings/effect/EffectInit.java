@@ -11,5 +11,5 @@ public class EffectInit {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Main.MOD_ID);
 
     public static final RegistryObject<MobEffect> CLEAR_EFFECT = MOB_EFFECTS.register("clear_effect",
-            () -> new ClearEffect(MobEffectCategory.NEUTRAL, 285949));
+            () -> new ClearEffect(MobEffectCategory.NEUTRAL, 1599175));
 }
