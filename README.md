@@ -5,7 +5,7 @@ Random things add to minecraft for more fun :)
 This mod add all the things you need to enhance your minecraft experience.
 
 ## feature
-- ore extractor (no craft for the moment)
+- ore extractor
 - maple and cherry tree
 - maple syrup
 - erbium and nether erbium ring to add heart
@@ -16,6 +16,7 @@ This mod add all the things you need to enhance your minecraft experience.
 - silver ore
 - silver armor
 - silver tools
+- random item (give you a random item on use)
 
  
 ## language
