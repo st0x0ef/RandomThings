@@ -87,5 +87,9 @@
   "item.randomthings.nether_erbium_helmet": "Casque en erbium du nether",
   "item.randomthings.nether_erbium_chestplate": "Plastron en erbium du nether",
   "item.randomthings.nether_erbium_leggings": "Jambière en erbium du nether",
-  "item.randomthings.nether_erbium_boots": "Bottes en erbium du nether"
+  "item.randomthings.nether_erbium_boots": "Bottes en erbium du nether",
+  "item.randomthings.random_item": "Item aléatoire",
+  "block.randomthings.random_ore": "Minerai aléatoire",
+  "block.randomthings.deepslate_random_ore": "Minerai aléatoire de profondoise",
+  "tooltip.randomthings.random_item": "Donne un item aléatoire"
 }

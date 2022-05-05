@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "BLB",
+    "BLB",
+    " C "
+  ],
+  "key":
+  {
+    "B":
+    {
+      "item": "randomthings:silver_block"
+    },
+    "L":
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    "C":
+    {
+      "item": "minecraft:stone_slab"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:ore_extractor",
+    "count": 1
+  }
+}

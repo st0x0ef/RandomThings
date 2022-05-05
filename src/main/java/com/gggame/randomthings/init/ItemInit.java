@@ -3,6 +3,7 @@ package com.gggame.randomthings.init;
 
 import com.gggame.randomthings.Main;
 import com.gggame.randomthings.customitem.ErbiumRingItem;
+import com.gggame.randomthings.customitem.RandomItem;
 import com.gggame.randomthings.customitem.SapSpoutItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -99,6 +100,8 @@ public class ItemInit {
     public static final RegistryObject<Item> NETHER_ERBIUM_BOOTS = register("nether_erbium_boots",
             () -> new ArmorItem(BaseArmorMaterial.NETHER_ERBIUM, EquipmentSlot.FEET,
                     new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+
+    public static final RegistryObject<Item> RANDOM_ITEM = register("random_item", () -> new RandomItem(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB).durability(1)));
 
     private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
         return ITEMS.register(name, item);

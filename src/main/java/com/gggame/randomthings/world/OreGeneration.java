@@ -40,10 +40,20 @@ public class OreGeneration {
     public static final Holder<PlacedFeature>  NETHER_ERBIUM_ORE_PLACED = PlacementUtils.register("nether_erbium_ore_placed", OVERWORLD_ERBIUM_ORE, OrePlacement.rareOrePlacement(1,
             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(32))));
 
+    public static final List<OreConfiguration.TargetBlockState> OVERWORLD_RANDOM_ORE = List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockInit.SILVER_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.SILVER_ORE_DEEPSLATE.get().defaultBlockState()));
+
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> RANDOM_ORE = FeatureUtils.register("random_ore", Feature.ORE, new OreConfiguration(OVERWORLD_SILVER_ORE, 5));
+
+    public static final Holder<PlacedFeature> RANDOM_ORE_PLACED = PlacementUtils.register("random_ore_placed", SILVER_ORE, OrePlacement.rareOrePlacement(4,
+            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(64))));
+
     public static void generateOres(final BiomeLoadingEvent event) {
         List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
         base.add(SILVER_ORE_PLACED);
         base.add(OVERWORLD_ERBIUM_ORE_PLACED);
         base.add(NETHER_ERBIUM_ORE_PLACED);
+        base.add(RANDOM_ORE_PLACED);
     }
 }

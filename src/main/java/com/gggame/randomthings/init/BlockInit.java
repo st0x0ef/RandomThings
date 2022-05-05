@@ -36,7 +36,7 @@ public class BlockInit {
             () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(0,2)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
     public static final RegistryObject<Block> SILVER_ORE_DEEPSLATE = register("silver_ore_deepslate",
-            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).strength(4f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(0,2)),
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).strength(4f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops(), UniformInt.of(0,2)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
 
     public static final RegistryObject<Block> ORE_EXTRACTOR = register("ore_extractor",
@@ -221,13 +221,13 @@ public class BlockInit {
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
 
     public static final RegistryObject<Block> ERBIUM_ORE = register("erbium_ore",
-            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(5f).explosionResistance(3.5f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(4,9)),
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(5f).explosionResistance(3.5f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(2,5)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
     public static final RegistryObject<Block> ERBIUM_ORE_DEEPSLATE = register("erbium_ore_deepslate",
-            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).strength(8f).explosionResistance(3.5f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(4,9)),
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).strength(8f).explosionResistance(3.5f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops(), UniformInt.of(3,6)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
     public static final RegistryObject<Block> NETHER_ERBIUM_ORE = register("nether_erbium_ore",
-            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).strength(5f).explosionResistance(3.5f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(4,9)),
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).strength(5f).explosionResistance(3.5f).sound(SoundType.NETHERRACK).requiresCorrectToolForDrops(), UniformInt.of(3,6)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
     public static final RegistryObject<Block> ERBIUM_BLOCK = register("erbium_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GREEN).strength(10f).explosionResistance(4f).sound(SoundType.METAL)),
@@ -235,6 +235,12 @@ public class BlockInit {
     public static final RegistryObject<Block> NETHER_ERBIUM_BLOCK = register("nether_erbium_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).strength(10f).explosionResistance(4f).sound(SoundType.METAL)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> RANDOM_ORE = register("random_ore",
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(8,10)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+    public static final RegistryObject<Block> DEEPSLATE_RANDOM_ORE = register("deepslate_random_ore",
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).strength(3f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops(), UniformInt.of(8, 10)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
 
     private static <T extends Block> RegistryObject<T> register(final String name, final Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
         RegistryObject<T> obj = BLOCKS.register(name, block);

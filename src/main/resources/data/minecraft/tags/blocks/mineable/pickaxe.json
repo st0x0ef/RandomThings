@@ -13,6 +13,8 @@
     "randomthings:erbium_ore_deepslate",
     "randomthings:erbium_block",
     "randomthings:nether_erbium_block",
-    "randomthings:nether_erbium_ore"
+    "randomthings:nether_erbium_ore",
+    "randomthings:random_ore",
+    "randomthings:deepslate_random_ore"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "randomthings:deepslate_random_ore"
+  },
+  "result": "randomthings:random_item",
+  "experience": 5,
+  "cookingtime": 250
+}
