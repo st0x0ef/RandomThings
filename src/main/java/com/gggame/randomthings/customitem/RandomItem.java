@@ -33,88 +33,91 @@ public class RandomItem extends Item {
             double value = Math.random() * 100; // 0 - 100
 
             if (value < 1 /* 1% chance*/) {
-                give(pPlayer, Items.NETHERITE_INGOT.getDefaultInstance(), 2);
+                give(pPlayer, Items.NETHERITE_INGOT, 2);
             }
             else if (value < 5 /* 4% chance*/) {
-                give(pPlayer, Items.GOLDEN_APPLE.getDefaultInstance(), 16);
+                give(pPlayer, Items.GOLDEN_APPLE, 16);
             }
             else if (value < 7.5 /* 2.5% chance*/) {
-                give(pPlayer, Items.ENCHANTED_GOLDEN_APPLE.getDefaultInstance(), 16);
+                give(pPlayer, Items.ENCHANTED_GOLDEN_APPLE, 16);
             }
-            else if (value < 11 /* 3.5% chance*/) {
-                give(pPlayer, ItemInit.UPGRADED_NETHERITE_INGOT.get().getDefaultInstance(), 8);
+            else if (value < 9 /* 1.5% chance*/) {
+                give(pPlayer, ItemInit.UPGRADED_NETHERITE_INGOT.get(), 4);
+            }
+            else if (value < 11 /* 2% chance*/) {
+                give(pPlayer, ItemInit.SILVER_SWORD.get(), 1);
             }
             else if (value < 23 /* 12% chance*/) {
-                give(pPlayer, Items.DIAMOND.getDefaultInstance(), 16);
+                give(pPlayer, Items.DIAMOND, 16);
             }
             else if (value < 27 /* 4% chance*/) {
-                give(pPlayer, Items.DIAMOND.getDefaultInstance(), 32);
+                give(pPlayer, Items.DIAMOND, 32);
             }
             else if (value < 42 /* 15% chance*/) {
-                give(pPlayer, Items.IRON_INGOT.getDefaultInstance(), 32);
+                give(pPlayer, Items.IRON_INGOT, 32);
             }
             else if (value < 50 /* 10% chance*/) {
-                give(pPlayer, ItemInit.SILVER_INGOT.get().getDefaultInstance(), 32);
+                give(pPlayer, ItemInit.SILVER_INGOT.get(), 32);
             }
             else if (value < 50.8 /* 0.8% chance*/) {
-                give(pPlayer,  ItemInit.UPGRADED_NETHERITE_SWORD.get().getDefaultInstance(), 1);
+                give(pPlayer,  ItemInit.UPGRADED_NETHERITE_SWORD.get(), 1);
             }
             else if (value < 51.6 /* 0.8% chance*/) {
-                give(pPlayer,  ItemInit.UPGRADED_NETHERITE_PICKAXE.get().getDefaultInstance(), 1);
+                give(pPlayer,  ItemInit.UPGRADED_NETHERITE_PICKAXE.get(), 1);
             }
             else if (value < 52.4 /* 0.8% chance*/) {
-                give(pPlayer,  ItemInit.UPGRADED_NETHERITE_AXE.get().getDefaultInstance(), 1);
+                give(pPlayer,  ItemInit.UPGRADED_NETHERITE_AXE.get(), 1);
             }
             else if (value < 53.6 /* 1.2% chance*/) {
-                give(pPlayer,  Items.NETHERITE_SWORD.getDefaultInstance(), 1);
+                give(pPlayer,  Items.NETHERITE_SWORD, 1);
             }
             else if (value < 54.8 /* 1.2% chance*/) {
-                give(pPlayer,  Items.NETHERITE_PICKAXE.getDefaultInstance(), 1);
+                give(pPlayer,  Items.NETHERITE_PICKAXE, 1);
             }
             else if (value < 56 /* 1.2% chance*/) {
-                give(pPlayer,  Items.NETHERITE_AXE.getDefaultInstance(), 1);
+                give(pPlayer,  Items.NETHERITE_AXE, 1);
             }
             else if (value < 62 /* 6% chance*/) {
-                give(pPlayer, Items.GOLD_INGOT.getDefaultInstance(), 32);
+                give(pPlayer, Items.GOLD_INGOT, 32);
             }
             else if (value < 70 /* 8% chance*/) {
-                give(pPlayer, Items.FIRE_CHARGE.getDefaultInstance(), 4);
+                give(pPlayer, Items.FIRE_CHARGE, 4);
             }
             else if (value < 80 /* 10% chance*/) {
-                give(pPlayer, Items.COAL.getDefaultInstance(), 64);
+                give(pPlayer, Items.COAL, 64);
             }
             else if (value < 85 /* 5% chance*/) {
-                give(pPlayer, Items.COAL.getDefaultInstance(), 128);
+                give(pPlayer, Items.COAL, 128);
             }
             else if (value < 89 /* 4% chance*/) {
-                give(pPlayer, Items.TURTLE_HELMET.getDefaultInstance(), 1);
+                give(pPlayer, Items.TURTLE_HELMET, 1);
             }
             else if (value < 91 /* 2% chance*/) {
-                give(pPlayer, Items.AMETHYST_SHARD.getDefaultInstance(), 32);
+                give(pPlayer, Items.AMETHYST_SHARD, 32);
             }
             else if (value < 92 /* 1% chance*/) {
-                give(pPlayer, Items.BEACON.getDefaultInstance(), 1);
+                give(pPlayer, Items.BEACON, 1);
             }
             else if (value < 95 /* 3% chance*/) {
-                give(pPlayer, Items.CHORUS_FRUIT.getDefaultInstance(), 16);
+                give(pPlayer, Items.CHORUS_FRUIT, 16);
             }
             else if (value < 97 /* 2% chance*/) {
-                give(pPlayer, Items.DRAGON_BREATH.getDefaultInstance(), 4);
+                give(pPlayer, Items.DRAGON_BREATH, 4);
             }
             else if (value < 97.2 /* 0.2% chance*/) {
-                give(pPlayer, ItemInit.NETHER_ERBIUM_GEM.get().getDefaultInstance(), 8);
+                give(pPlayer, ItemInit.NETHER_ERBIUM_GEM.get(), 8);
             }
             else if (value < 97.9 /* 0.7% chance*/) {
-                give(pPlayer, ItemInit.ERBIUM_GEM.get().getDefaultInstance(), 8);
+                give(pPlayer, ItemInit.ERBIUM_GEM.get(), 8);
             }
             else if (value < 98.3 /* 0.4% chance*/) {
-                give(pPlayer, ItemInit.ERBIUM_RING.get().getDefaultInstance(), 1);
+                give(pPlayer, ItemInit.ERBIUM_RING.get(), 1);
             }
             else if (value < 98.45 /* 0.15% chance*/) {
-                give(pPlayer, ItemInit.UPGRADED_ERBIUM_RING.get().getDefaultInstance(), 1);
+                give(pPlayer, ItemInit.UPGRADED_ERBIUM_RING.get(), 1);
             }
             else if (value < 100 /* 1.55% chance*/) {
-                give(pPlayer, Items.DRAGON_HEAD.getDefaultInstance(), 1);
+                give(pPlayer, Items.DRAGON_HEAD, 1);
             }
         }
 
@@ -123,11 +126,11 @@ public class RandomItem extends Item {
         return super.use(pLevel, pPlayer, pUsedHand);
     }
 
-    private void give(Player pPlayer, ItemStack item, int quantity) {
+    private void give(Player pPlayer, Item item, int quantity) {
         ItemStack itemStack = new ItemStack(new ItemLike() {
             @Override
             public Item asItem() {
-                return item.getItem();
+                return item;
             }
         }, quantity);
 

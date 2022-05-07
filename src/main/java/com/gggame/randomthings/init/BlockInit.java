@@ -44,8 +44,16 @@ public class BlockInit {
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB)));
 
     public static final RegistryObject<Block> GRANITE_BRICK = register("granite_brick",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).strength(1.5f).sound(SoundType.STONE)),
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> GRANITE_BRICK_STAIRS = register("granite_brick_stairs",
+            () -> new StairBlock(() -> BlockInit.GRANITE_BRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).strength(1f).sound(SoundType.STONE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> GRANITE_BRICK_SLAB = register("granite_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).strength(1f).sound(SoundType.STONE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
     public static final RegistryObject<Block> DIORITE_BRICK = register("diorite_brick",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(1.5f).sound(SoundType.STONE)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));

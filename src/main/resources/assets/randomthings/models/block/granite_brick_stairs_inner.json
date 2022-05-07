@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "randomthings:block/granite_brick",
+    "top": "randomthings:block/granite_brick",
+    "side": "randomthings:block/granite_brick"
+  }
+}

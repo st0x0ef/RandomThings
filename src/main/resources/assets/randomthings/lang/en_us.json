@@ -91,5 +91,7 @@
   "item.randomthings.random_item": "Random item",
   "block.randomthings.random_ore": "Random ore",
   "block.randomthings.deepslate_random_ore": "deep random ore",
-  "tooltip.randomthings.random_item": "Get random item"
+  "tooltip.randomthings.random_item": "Get random item",
+  "block.randomthings.granite_brick_slab": "Granite brick slab",
+  "block.randomthings.granite_brick_stairs": "Granite brick stairs"
 }

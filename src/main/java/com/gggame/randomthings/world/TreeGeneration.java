@@ -17,12 +17,17 @@ public class TreeGeneration {
         ResourceKey<Biome> key = ResourceKey.create(Registry.BIOME_REGISTRY, event.getName());
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
-        if(types.contains(BiomeDictionary.Type.FOREST)) {
+        if(types.contains(BiomeDictionary.Type.COLD)) {
+            List<Holder<PlacedFeature>> base =
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+
+            base.add(ModPlacedFeature.MAPLE_PLACED);
+        }
+        if(types.contains(BiomeDictionary.Type.MESA)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(ModPlacedFeature.CHERRY_PLACED);
-            base.add(ModPlacedFeature.MAPLE_PLACED);
         }
     }
 }

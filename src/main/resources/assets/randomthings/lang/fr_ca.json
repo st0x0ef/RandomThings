@@ -73,7 +73,7 @@
   "tooltip.randomthings.shift": "§lSHIFT§r pour plus d'information",
   "tooltip.randomthings.erbium_ring": "Supprime l'effet des potions, supprime les effets du feu et redonne un point de vie.",
   "tooltip.randomthings.nether_erbium_ring": "Supprime l'effet des potions négative, supprime les effets du feu et redonne deux points de vie.",
-  "item.randomthings.erbium_crystal": "Cystal en erbium",
+  "item.randomthings.erbium_crystal": "Crystal en erbium",
   "item.minecraft.potion.effect.erbium_potion": "Potion d'erbium",
   "item.minecraft.splash_potion.effect.erbium_potion": "Potion jetable d'erbium",
   "item.minecraft.lingering_potion.effect.erbium_potion": "Potion d'erbium persistante",
@@ -91,5 +91,7 @@
   "item.randomthings.random_item": "Item aléatoire",
   "block.randomthings.random_ore": "Minerai aléatoire",
   "block.randomthings.deepslate_random_ore": "Minerai aléatoire de profondoise",
-  "tooltip.randomthings.random_item": "Donne un item aléatoire"
+  "tooltip.randomthings.random_item": "Donne un item aléatoire",
+  "block.randomthings.granite_brick_slab": "Dalle en brique de granite",
+  "block.randomthings.granite_brick_stairs": "Escalier en brique de granite"
 }

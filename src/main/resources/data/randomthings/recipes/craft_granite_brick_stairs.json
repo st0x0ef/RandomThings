@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:granite_brick"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:granite_brick_stairs",
+    "count": 4
+  }
+}
