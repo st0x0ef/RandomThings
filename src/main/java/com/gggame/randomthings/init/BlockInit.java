@@ -44,7 +44,7 @@ public class BlockInit {
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB)));
 
     public static final RegistryObject<Block> GRANITE_BRICK = register("granite_brick",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)),
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRANITE)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
     public static final RegistryObject<Block> GRANITE_BRICK_STAIRS = register("granite_brick_stairs",
             () -> new StairBlock(() -> BlockInit.GRANITE_BRICK.get().defaultBlockState(),
