@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:andesite_brick"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:andesite_brick_stairs",
+    "count": 4
+  }
+}

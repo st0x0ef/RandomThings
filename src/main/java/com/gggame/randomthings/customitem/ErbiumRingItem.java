@@ -16,17 +16,17 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ErbiumRingItem extends Item {
-    private boolean upgraded;
+    private int tier;
 
-    public ErbiumRingItem(Properties pProperties, boolean upgraded) {
+    public ErbiumRingItem(Properties pProperties, int tier) {
         super(pProperties);
-        this.upgraded = upgraded;
+        this.tier = tier;
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        if (upgraded) {
-            pPlayer.heal(2);
+        if (tier == 3) {
+            pPlayer.heal(3);
             pPlayer.removeEffect(MobEffects.BLINDNESS);
             pPlayer.removeEffect(MobEffects.WITHER);
             pPlayer.removeEffect(MobEffects.WEAKNESS);
@@ -40,13 +40,17 @@ public class ErbiumRingItem extends Item {
             pPlayer.removeEffect(MobEffects.HARM);
             pPlayer.removeEffect(MobEffects.BAD_OMEN);
             pPlayer.removeEffect(MobEffects.GLOWING);
+            pPlayer.clearFire();
+        }
+        else if (tier == 2) {
+            pPlayer.heal(2);
+            pPlayer.removeAllEffects();
+            pPlayer.clearFire();
         }
         else {
             pPlayer.heal(1);
             pPlayer.removeAllEffects();
         }
-
-        pPlayer.clearFire();
 
         pPlayer.getItemInHand(pUsedHand).hurtAndBreak(1, pPlayer, (player) ->  player.broadcastBreakEvent(player.getUsedItemHand()));
 
@@ -56,8 +60,11 @@ public class ErbiumRingItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
-            if (upgraded) {
-                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.nether_erbium_ring"));
+            if (tier == 3) {
+                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring_tier_2"));
+            }
+            else if (tier == 2) {
+                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring_tier_2"));
             }
             else {
                 pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring"));

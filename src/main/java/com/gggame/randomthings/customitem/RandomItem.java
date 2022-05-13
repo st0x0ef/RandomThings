@@ -110,13 +110,16 @@ public class RandomItem extends Item {
             else if (value < 97.9 /* 0.7% chance*/) {
                 give(pPlayer, ItemInit.ERBIUM_GEM.get(), 8);
             }
-            else if (value < 98.3 /* 0.4% chance*/) {
-                give(pPlayer, ItemInit.ERBIUM_RING.get(), 1);
+            else if (value < 98.25 /* 0.35% chance*/) {
+                give(pPlayer, ItemInit.ERBIUM_RING_TIER_1.get(), 1);
             }
-            else if (value < 98.45 /* 0.15% chance*/) {
-                give(pPlayer, ItemInit.UPGRADED_ERBIUM_RING.get(), 1);
+            else if (value < 98.4 /* 0.15% chance*/) {
+                give(pPlayer, ItemInit.ERBIUM_RING_TIER_2.get(), 1);
             }
-            else if (value < 100 /* 1.55% chance*/) {
+            else if (value < 98.5 /* 0.1% chance*/) {
+                give(pPlayer, ItemInit.ERBIUM_RING_TIER_3.get(), 1);
+            }
+            else if (value < 100 /* 1.5% chance*/) {
                 give(pPlayer, Items.DRAGON_HEAD, 1);
             }
         }

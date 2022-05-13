@@ -48,17 +48,36 @@ public class BlockInit {
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
     public static final RegistryObject<Block> GRANITE_BRICK_STAIRS = register("granite_brick_stairs",
             () -> new StairBlock(() -> BlockInit.GRANITE_BRICK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).strength(1f).sound(SoundType.STONE)),
+                    BlockBehaviour.Properties.copy(Blocks.GRANITE_STAIRS)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
     public static final RegistryObject<Block> GRANITE_BRICK_SLAB = register("granite_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).strength(1f).sound(SoundType.STONE)),
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE_STAIRS)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
 
     public static final RegistryObject<Block> DIORITE_BRICK = register("diorite_brick",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_LIGHT_GRAY).strength(1.5f).sound(SoundType.STONE)),
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIORITE)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
+    public static final RegistryObject<Block> DIORITE_BRICK_STAIRS = register("diorite_brick_stairs",
+            () -> new StairBlock(() -> BlockInit.DIORITE_BRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.DIORITE_STAIRS)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
+    public static final RegistryObject<Block> DIORITE_BRICK_SLAB = register("diorite_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIORITE_SLAB)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
     public static final RegistryObject<Block> ANDESITE_BRICK = register("andesite_brick",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(1.5f).sound(SoundType.STONE)),
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANDESITE)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
+    public static final RegistryObject<Block> ANDESITE_BRICK_STAIRS = register("andesite_brick_stairs",
+            () -> new StairBlock(() -> BlockInit.ANDESITE_BRICK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.DIORITE_STAIRS)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
+    public static final RegistryObject<Block> ANDESITE_BRICK_SLAB = register("andesite_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.ANDESITE_SLAB)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
 
     public static final RegistryObject<Block> CHERRY_PLANKS = register("cherry_planks",
@@ -235,14 +254,23 @@ public class BlockInit {
             () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).strength(8f).explosionResistance(3.5f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops(), UniformInt.of(3,6)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
     public static final RegistryObject<Block> NETHER_ERBIUM_ORE = register("nether_erbium_ore",
-            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).strength(5f).explosionResistance(3.5f).sound(SoundType.NETHERRACK).requiresCorrectToolForDrops(), UniformInt.of(3,6)),
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.NETHER).strength(3f).sound(SoundType.NETHERRACK).requiresCorrectToolForDrops(), UniformInt.of(3,6)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+
+    public static final RegistryObject<Block> END_ERBIUM_ORE = register("end_erbium_ore",
+            () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.SAND).strength(6f).explosionResistance(9f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(4,8)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+
     public static final RegistryObject<Block> ERBIUM_BLOCK = register("erbium_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GREEN).strength(10f).explosionResistance(4f).sound(SoundType.METAL)),
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_GREEN).strength(10f).explosionResistance(4f).sound(SoundType.METAL)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
     public static final RegistryObject<Block> NETHER_ERBIUM_BLOCK = register("nether_erbium_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_RED).strength(10f).explosionResistance(4f).sound(SoundType.METAL)),
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_RED).strength(10f).explosionResistance(4f).sound(SoundType.METAL)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+    public static final RegistryObject<Block> END_ERBIUM_BLOCK = register("end_erbium_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_PURPLE).strength(10f).explosionResistance(4f).sound(SoundType.METAL)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
     public static final RegistryObject<Block> RANDOM_ORE = register("random_ore",
             () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).strength(2f).sound(SoundType.STONE).requiresCorrectToolForDrops(), UniformInt.of(8,10)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));

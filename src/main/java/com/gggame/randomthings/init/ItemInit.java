@@ -69,8 +69,11 @@ public class ItemInit {
 
     public static final RegistryObject<Item> ERBIUM_GEM = register("erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
     public static final RegistryObject<Item> NETHER_ERBIUM_GEM = register("nether_erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
-    public static final RegistryObject<Item> ERBIUM_RING = register("erbium_ring", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(20).rarity(Rarity.UNCOMMON), false));
-    public static final RegistryObject<Item> UPGRADED_ERBIUM_RING = register("upgraded_erbium_ring", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(80).rarity(Rarity.UNCOMMON), true));
+    public static final RegistryObject<Item> END_ERBIUM_GEM = register("end_erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+
+    public static final RegistryObject<Item> ERBIUM_RING_TIER_1 = register("erbium_ring_tier_1", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(30).rarity(Rarity.UNCOMMON), 1));
+    public static final RegistryObject<Item> ERBIUM_RING_TIER_2 = register("erbium_ring_tier_2", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(80).rarity(Rarity.UNCOMMON), 2));
+    public static final RegistryObject<Item> ERBIUM_RING_TIER_3 = register("erbium_ring_tier_3", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(150).rarity(Rarity.UNCOMMON), 3));
 
     public static final RegistryObject<Item> ERBIUM_CRYSTAL = register("erbium_crystal", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
 
@@ -88,6 +91,7 @@ public class ItemInit {
     public static final RegistryObject<Item> ERBIUM_BOOTS = register("erbium_boots",
             () -> new ArmorItem(BaseArmorMaterial.ERBIUM, EquipmentSlot.FEET,
                     new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+
     public static final RegistryObject<Item> NETHER_ERBIUM_HELMET = register("nether_erbium_helmet",
             () -> new ModArmorItem(BaseArmorMaterial.NETHER_ERBIUM, EquipmentSlot.HEAD,
                     new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
@@ -99,6 +103,19 @@ public class ItemInit {
                     new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
     public static final RegistryObject<Item> NETHER_ERBIUM_BOOTS = register("nether_erbium_boots",
             () -> new ArmorItem(BaseArmorMaterial.NETHER_ERBIUM, EquipmentSlot.FEET,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+
+    public static final RegistryObject<Item> END_ERBIUM_HELMET = register("end_erbium_helmet",
+            () -> new ModArmorItem(BaseArmorMaterial.END_ERBIUM, EquipmentSlot.HEAD,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> END_ERBIUM_CHESTPLATE = register("end_erbium_chestplate",
+            () -> new ArmorItem(BaseArmorMaterial.END_ERBIUM, EquipmentSlot.CHEST,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> END_ERBIUM_LEGGINGS = register("end_erbium_leggings",
+            () -> new ArmorItem(BaseArmorMaterial.END_ERBIUM, EquipmentSlot.LEGS,
+                    new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<Item> END_ERBIUM_BOOTS = register("end_erbium_boots",
+            () -> new ArmorItem(BaseArmorMaterial.END_ERBIUM, EquipmentSlot.FEET,
                     new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
 
     public static final RegistryObject<Item> RANDOM_ITEM = register("random_item", () -> new RandomItem(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB).durability(1)));

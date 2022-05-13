@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "randomthings:granite"
+    "item": "minecraft:granite"
   },
   "result": "randomthings:granite_brick",
   "count": 2

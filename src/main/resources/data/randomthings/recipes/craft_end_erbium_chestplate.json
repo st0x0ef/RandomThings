@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "X X",
+    "XRX",
+    "XXX"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:end_erbium_gem"
+    },
+    "R":
+    {
+      "item": "randomthings:erbium_ring_tier_3"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:end_erbium_chestplate",
+    "count": 1
+  }
+}

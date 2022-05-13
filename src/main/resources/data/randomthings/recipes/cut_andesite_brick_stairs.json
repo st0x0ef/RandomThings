@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "randomthings:andesite_brick"
+  },
+  "result": "randomthings:andesite_brick_stairs",
+  "count": 1
+}
