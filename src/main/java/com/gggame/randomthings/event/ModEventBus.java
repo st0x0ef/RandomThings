@@ -14,12 +14,12 @@ public class ModEventBus {
     @SubscribeEvent
     public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>>
                                                            event) {
-        event.getRegistry().register(
+        event.getRegistry().registerAll(
                 new ErbiumGemInAbandonedMineshaftAdditionModifier.Serializer().setRegistryName
                         (new ResourceLocation(Main.MOD_ID,"erbium_gem_in_abandoned_mineshaft"))
         );
 
-        event.getRegistry().register(
+        event.getRegistry().registerAll(
                 new EndErbiumGemInEndCitiesAdditionModifier.Serializer().setRegistryName(
                         new ResourceLocation(Main.MOD_ID, "end_erbium_gem_in_end_cities")
                 )

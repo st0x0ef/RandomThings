@@ -106,5 +106,6 @@
   "block.randomthings.diorite_brick_slab": "Dalle en brique de granite",
   "block.randomthings.diorite_brick_stairs": "Escalier en brique de granite",
   "block.randomthings.andesite_brick_slab": "Dalle en brique d'andesite",
-  "block.randomthings.andesite_brick_stairs": "Escaliers en brique d'andesite"
+  "block.randomthings.andesite_brick_stairs": "Escaliers en brique d'andesite",
+  "block.randomthings.solid_lava": "Lave solide"
 }

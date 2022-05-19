@@ -42,11 +42,6 @@ public class SapSpoutItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        if (Screen.hasShiftDown()) {
-            pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.sap_spout"));
-        }
-        else {
-            pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.shift"));
-        }
+        pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.sap_spout"));
     }
 }

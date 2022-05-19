@@ -23,11 +23,11 @@ public class ItemInit {
     public static final RegistryObject<Item> UPGRADED_NETHERITE_INGOT = register("upgraded_netherite_ingot", () -> new Item(new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_ORE_TAB)));
 
     // tool
-    public static final RegistryObject<SwordItem> SILVER_SWORD = register("silver_sword", () -> new SwordItem(ItemMaterialInit.ARGENT, 3, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
-    public static final RegistryObject<PickaxeItem> SILVER_PICKAXE = register("silver_pickaxe", () -> new PickaxeItem(ItemMaterialInit.ARGENT, 2, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
-    public static final RegistryObject<AxeItem> SILVER_AXE = register("silver_axe", () -> new AxeItem(ItemMaterialInit.ARGENT, 5, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
-    public static final RegistryObject<HoeItem> SILVER_HOE = register("silver_hoe", () -> new HoeItem(ItemMaterialInit.ARGENT, 2, 1f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
-    public static final RegistryObject<ShovelItem> SILVER_SHOVEL = register("silver_shovel", () -> new ShovelItem(ItemMaterialInit.ARGENT, 2, 1f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<SwordItem> SILVER_SWORD = register("silver_sword", () -> new SwordItem(ItemMaterialInit.SILVER, 3, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<PickaxeItem> SILVER_PICKAXE = register("silver_pickaxe", () -> new PickaxeItem(ItemMaterialInit.SILVER, 2, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<AxeItem> SILVER_AXE = register("silver_axe", () -> new AxeItem(ItemMaterialInit.SILVER, 5, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<HoeItem> SILVER_HOE = register("silver_hoe", () -> new HoeItem(ItemMaterialInit.SILVER, 2, 1f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
+    public static final RegistryObject<ShovelItem> SILVER_SHOVEL = register("silver_shovel", () -> new ShovelItem(ItemMaterialInit.SILVER, 2, 1f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
 
     public static final RegistryObject<SwordItem> UPGRADED_NETHERITE_SWORD = register("upgraded_netherite_sword", () -> new SwordItem(ItemMaterialInit.UPGRADED_NETHERITE, 3, 1.2f, new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
     public static final RegistryObject<PickaxeItem> UPGRADED_NETHERITE_PICKAXE = register("upgraded_netherite_pickaxe", () -> new PickaxeItem(ItemMaterialInit.UPGRADED_NETHERITE, 2, 1.2f, new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "randomthings:solid_lava"
+    }
+  ],
+  "result": {
+    "item": "minecraft:magma_block",
+    "count": 1
+  }
+}

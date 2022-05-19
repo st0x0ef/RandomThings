@@ -68,14 +68,14 @@
   "item.randomthings.erbium_gem": "Erbium gem",
   "item.randomthings.nether_erbium_gem": "Nether erbium gem",
   "item.randomthings.end_erbium_gem": "End erbium gem",
-  "item.randomthings.erbium_ring_tier_1": "Erbium ring level 1",
-  "item.randomthings.erbium_ring_tier_2": "Erbium ring level 2",
-  "item.randomthings.erbium_ring_tier_3": "Erbium ring level 3",
+  "item.randomthings.erbium_ring_tier_1": "Erbium ring tier 1",
+  "item.randomthings.erbium_ring_tier_2": "Erbium ring tier 2",
+  "item.randomthings.erbium_ring_tier_3": "Erbium ring tier 3",
   "block.randomthings.erbium_block": "Erbium block",
   "block.randomthings.nether_erbium_block": "Nether erbium block",
   "block.randomthings.end_erbium_block": "End erbium block",
   "tooltip.randomthings.shift": "§lSHIFT§r for more information",
-  "tooltip.randomthings.erbium_ring": "Removes all effect of potions and restores one point of life",
+  "tooltip.randomthings.erbium_ring_tier_1": "Removes all effect of potions and restores one point of life",
   "tooltip.randomthings.erbium_ring_tier_2": "Removes all effect of potions, removes the effects of fire and restores two points of life",
   "tooltip.randomthings.erbium_ring_tier_3": "Removes bad effect of potions, removes the effects of fire and restores three points of life",
   "item.randomthings.erbium_crystal": "Erbium crystal",
@@ -106,5 +106,6 @@
   "block.randomthings.diorite_brick_slab": "Diorite brick slab",
   "block.randomthings.diorite_brick_stairs": "Diorite brick stairs",
   "block.randomthings.andesite_brick_slab": "Andesite brick slab",
-  "block.randomthings.andesite_brick_stairs": "Andesite brick stairs"
+  "block.randomthings.andesite_brick_stairs": "Andesite brick stairs",
+  "block.randomthings.solid_lava": "Solid lava"
 }

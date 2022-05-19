@@ -61,13 +61,13 @@ public class ErbiumRingItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             if (tier == 3) {
-                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring_tier_2"));
+                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring_tier_3"));
             }
             else if (tier == 2) {
                 pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring_tier_2"));
             }
             else {
-                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring"));
+                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring_tier_1"));
             }
         }
         else {

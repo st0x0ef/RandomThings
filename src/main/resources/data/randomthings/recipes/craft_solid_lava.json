@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " L ",
+    "LBL",
+    " L "
+  ],
+  "key":
+  {
+    "B":
+    {
+      "item": "minecraft:lava_bucket"
+    },
+    "L":
+    {
+      "item": "minecraft:magma_block"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:solid_lava",
+    "count": 4
+  }
+}

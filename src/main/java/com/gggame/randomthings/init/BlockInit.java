@@ -2,6 +2,7 @@ package com.gggame.randomthings.init;
 
 import com.gggame.randomthings.Main;
 import com.gggame.randomthings.customblock.OreExtractorBlock;
+import com.gggame.randomthings.customblock.SolidLavaBlock;
 import com.gggame.randomthings.world.tree.CherryTreeGrower;
 import com.gggame.randomthings.world.tree.MapleTreeGrower;
 import com.google.common.base.Supplier;
@@ -188,7 +189,7 @@ public class BlockInit {
 
     public static final RegistryObject<Block> UPGRADED_NETHERITE_BLOCK = register("upgraded_netherite_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_BLACK).strength(60.0F, 1500.0F).sound(SoundType.NETHERITE_BLOCK)),
-            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB).fireResistant()));
 
     public static final RegistryObject<Block> CHERRY_SAPLING = register("cherry_sapling",
             () -> new SaplingBlock(new CherryTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)),
@@ -277,6 +278,10 @@ public class BlockInit {
     public static final RegistryObject<Block> DEEPSLATE_RANDOM_ORE = register("deepslate_random_ore",
             () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).strength(3f).sound(SoundType.DEEPSLATE).requiresCorrectToolForDrops(), UniformInt.of(8, 10)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+
+    public static final RegistryObject<Block> SOLID_LAVA = register("solid_lava",
+            () -> new SolidLavaBlock(BlockBehaviour.Properties.of(Material.LAVA, MaterialColor.COLOR_ORANGE).strength(1f).requiresCorrectToolForDrops().lightLevel((value) -> { return 15; })),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB).fireResistant()));
 
     private static <T extends Block> RegistryObject<T> register(final String name, final Supplier<? extends T> block, Function<RegistryObject<T>, Supplier<? extends Item>> item) {
         RegistryObject<T> obj = BLOCKS.register(name, block);
