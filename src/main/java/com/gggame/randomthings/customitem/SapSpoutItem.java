@@ -10,9 +10,12 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
@@ -32,7 +35,13 @@ public class SapSpoutItem extends Item {
             Player pPlayer = pContext.getPlayer();
             BlockPos positionClicked = pContext.getClickedPos();
             if (pContext.getLevel().getBlockState(positionClicked).getBlock() == BlockInit.MAPLE_LOG.get()) {
-                pPlayer.addItem(ItemInit.MAPLE_WATER_BOTTLE.get().getDefaultInstance());
+                pPlayer.drop(ItemInit.MAPLE_WATER_BOTTLE.get().getDefaultInstance(), false, false);
+
+                if (Math.random() < 0.1) {
+                    pPlayer.level.removeBlock(positionClicked, false);
+                    pPlayer.level.setBlock(positionClicked, BlockInit.MAPLE_LOG_WITHOUT_SAP.get().defaultBlockState(), 128);
+                }
+
                 pPlayer.getItemInHand(pContext.getHand()).hurtAndBreak(1, pPlayer, (player) ->  player.broadcastBreakEvent(player.getUsedItemHand()));
             }
         }
