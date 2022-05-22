@@ -34,21 +34,29 @@ public class OreGeneration {
     public static final List<OreConfiguration.TargetBlockState> NETHER_ERBIUM_ORE_REPLACEABLES = List.of(
             OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockInit.NETHER_ERBIUM_ORE.get().defaultBlockState()));
 
+    public static final List<OreConfiguration.TargetBlockState> SOLID_LAVA_ORE_REPLACEABLES = List.of(
+            OreConfiguration.target(OreFeatures.NETHERRACK, BlockInit.SOLID_LAVA.get().defaultBlockState()));
+
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> OVERWORLD_ERBIUM_ORE = FeatureUtils.register("overworld_erbium_ore", Feature.ORE, new OreConfiguration(OVERWORLD_ERBIUM_ORE_REPLACEABLES, 4));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> NETHER_ERBIUM_ORE = FeatureUtils.register("nether_erbium_ore", Feature.ORE, new OreConfiguration(NETHER_ERBIUM_ORE_REPLACEABLES, 4));
 
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> SOLID_LAVA = FeatureUtils.register("solid_lava", Feature.ORE, new OreConfiguration(SOLID_LAVA_ORE_REPLACEABLES, 20));
+
     public static final Holder<PlacedFeature>  OVERWORLD_ERBIUM_ORE_PLACED = PlacementUtils.register("overworld_erbium_ore_placed", OVERWORLD_ERBIUM_ORE, OrePlacement.rareOrePlacement(1,
             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(0))));
-    public static final Holder<PlacedFeature>  NETHER_ERBIUM_ORE_PLACED = PlacementUtils.register("nether_erbium_ore_placed", OVERWORLD_ERBIUM_ORE, OrePlacement.rareOrePlacement(1,
+    public static final Holder<PlacedFeature>  NETHER_ERBIUM_ORE_PLACED = PlacementUtils.register("nether_erbium_ore_placed", NETHER_ERBIUM_ORE, OrePlacement.rareOrePlacement(1,
             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(32))));
+
+    public static final Holder<PlacedFeature>  SOLID_LAVA_PLACED = PlacementUtils.register("solid_lava_placed", SOLID_LAVA, OrePlacement.commonOrePlacement(16,
+            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(128))));
 
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_RANDOM_ORE = List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockInit.SILVER_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.SILVER_ORE_DEEPSLATE.get().defaultBlockState()));
 
-    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> RANDOM_ORE = FeatureUtils.register("random_ore", Feature.ORE, new OreConfiguration(OVERWORLD_SILVER_ORE, 5));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> RANDOM_ORE = FeatureUtils.register("random_ore", Feature.ORE, new OreConfiguration(OVERWORLD_RANDOM_ORE, 5));
 
-    public static final Holder<PlacedFeature> RANDOM_ORE_PLACED = PlacementUtils.register("random_ore_placed", SILVER_ORE, OrePlacement.rareOrePlacement(4,
+    public static final Holder<PlacedFeature> RANDOM_ORE_PLACED = PlacementUtils.register("random_ore_placed", RANDOM_ORE, OrePlacement.rareOrePlacement(4,
             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(64))));
 
     public static void generateOres(final BiomeLoadingEvent event) {
@@ -57,5 +65,6 @@ public class OreGeneration {
         base.add(OVERWORLD_ERBIUM_ORE_PLACED);
         base.add(NETHER_ERBIUM_ORE_PLACED);
         base.add(RANDOM_ORE_PLACED);
+        base.add(SOLID_LAVA_PLACED);
     }
 }

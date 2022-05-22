@@ -2,6 +2,8 @@ package com.gggame.randomthings.customblock;
 
 
 import java.util.Random;
+
+import com.gggame.randomthings.init.BlockInit;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -23,8 +25,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class SolidLavaBlock extends Block {
-    private static final int BUBBLE_COLUMN_CHECK_DELAY = 20;
-
     public SolidLavaBlock(BlockBehaviour.Properties pProperties) {
         super(pProperties);
     }
@@ -53,8 +53,7 @@ public class SolidLavaBlock extends Block {
     public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
         BlockPos blockpos = pPos.above();
         if (pLevel.getFluidState(pPos).is(FluidTags.WATER)) {
-            pLevel.playSound((Player)null, pPos, SoundEvents.FIRE_EXTINGUISH, SoundSource.BLOCKS, 0.5F, 2.6F + (pLevel.random.nextFloat() - pLevel.random.nextFloat()) * 0.8F);
-            pLevel.sendParticles(ParticleTypes.LARGE_SMOKE, (double)blockpos.getX() + 0.5D, (double)blockpos.getY() + 0.25D, (double)blockpos.getZ() + 0.5D, 8, 0.5D, 0.25D, 0.5D, 0.0D);
+            pLevel.setBlock(blockpos, Blocks.OBSIDIAN.defaultBlockState(), 128);
         }
 
     }

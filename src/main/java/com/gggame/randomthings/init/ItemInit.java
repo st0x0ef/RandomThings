@@ -118,7 +118,7 @@ public class ItemInit {
             () -> new ArmorItem(BaseArmorMaterial.END_ERBIUM, EquipmentSlot.FEET,
                     new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
 
-    public static final RegistryObject<Item> RANDOM_ITEM = register("random_item", () -> new RandomItem(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB).durability(1)));
+    public static final RegistryObject<Item> RANDOM_ITEM = register("random_item", () -> new RandomItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(1)));
 
     private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
         return ITEMS.register(name, item);
