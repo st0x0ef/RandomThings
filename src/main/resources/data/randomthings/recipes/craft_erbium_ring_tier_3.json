@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "PX ",
+    "X X",
+    " X "
+  ],
+  "key":
+  {
+    "P":
+    {
+      "item": "randomthings:end_erbium_pearl"
+    },
+    "X":
+    {
+      "item": "randomthings:end_erbium_gem"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:erbium_ring_tier_3",
+    "count": 1
+  }
+}

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    " X ",
+    "PX ",
     "X X",
     " X "
   ],
@@ -11,11 +11,15 @@
     "X":
     {
       "item": "randomthings:erbium_gem"
+    },
+    "P":
+    {
+      "item": "randomthings:erbium_pearl"
     }
   },
   "result":
   {
-    "item": "randomthings:erbium_ring",
+    "item": "randomthings:erbium_ring_tier_1",
     "count": 1
   }
 }

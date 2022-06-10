@@ -6,6 +6,7 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 
@@ -34,17 +36,23 @@ public class OreGeneration {
     public static final List<OreConfiguration.TargetBlockState> NETHER_ERBIUM_ORE_REPLACEABLES = List.of(
             OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, BlockInit.NETHER_ERBIUM_ORE.get().defaultBlockState()));
 
+    public static final List<OreConfiguration.TargetBlockState> END_ERBIUM_ORE_REPLACEABLES = List.of(
+            OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), BlockInit.END_ERBIUM_ORE.get().defaultBlockState()));
+
     public static final List<OreConfiguration.TargetBlockState> SOLID_LAVA_ORE_REPLACEABLES = List.of(
             OreConfiguration.target(OreFeatures.NETHERRACK, BlockInit.SOLID_LAVA.get().defaultBlockState()));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> OVERWORLD_ERBIUM_ORE = FeatureUtils.register("overworld_erbium_ore", Feature.ORE, new OreConfiguration(OVERWORLD_ERBIUM_ORE_REPLACEABLES, 4));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> NETHER_ERBIUM_ORE = FeatureUtils.register("nether_erbium_ore", Feature.ORE, new OreConfiguration(NETHER_ERBIUM_ORE_REPLACEABLES, 4));
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> END_ERBIUM_ORE = FeatureUtils.register("end_erbium_ore", Feature.ORE, new OreConfiguration(END_ERBIUM_ORE_REPLACEABLES, 4));
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> SOLID_LAVA = FeatureUtils.register("solid_lava", Feature.ORE, new OreConfiguration(SOLID_LAVA_ORE_REPLACEABLES, 20));
 
-    public static final Holder<PlacedFeature>  OVERWORLD_ERBIUM_ORE_PLACED = PlacementUtils.register("overworld_erbium_ore_placed", OVERWORLD_ERBIUM_ORE, OrePlacement.rareOrePlacement(1,
+    public static final Holder<PlacedFeature>  OVERWORLD_ERBIUM_ORE_PLACED = PlacementUtils.register("overworld_erbium_ore_placed", OVERWORLD_ERBIUM_ORE, OrePlacement.rareOrePlacement(2,
             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(0))));
-    public static final Holder<PlacedFeature>  NETHER_ERBIUM_ORE_PLACED = PlacementUtils.register("nether_erbium_ore_placed", NETHER_ERBIUM_ORE, OrePlacement.rareOrePlacement(1,
+    public static final Holder<PlacedFeature>  NETHER_ERBIUM_ORE_PLACED = PlacementUtils.register("nether_erbium_ore_placed", NETHER_ERBIUM_ORE, OrePlacement.rareOrePlacement(2,
+            HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(32))));
+    public static final Holder<PlacedFeature>  END_ERBIUM_ORE_PLACED = PlacementUtils.register("end_erbium_ore_placed", END_ERBIUM_ORE, OrePlacement.rareOrePlacement(2,
             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(32))));
 
     public static final Holder<PlacedFeature>  SOLID_LAVA_PLACED = PlacementUtils.register("solid_lava_placed", SOLID_LAVA, OrePlacement.commonOrePlacement(16,
@@ -64,6 +72,7 @@ public class OreGeneration {
         base.add(SILVER_ORE_PLACED);
         base.add(OVERWORLD_ERBIUM_ORE_PLACED);
         base.add(NETHER_ERBIUM_ORE_PLACED);
+        base.add(END_ERBIUM_ORE_PLACED);
         base.add(RANDOM_ORE_PLACED);
         base.add(SOLID_LAVA_PLACED);
     }

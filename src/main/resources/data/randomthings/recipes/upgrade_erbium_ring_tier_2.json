@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "randomthings:erbium_ring_tier_1"
+  },
+  "addition": {
+    "item": "randomthings:nether_erbium_gem"
+  },
+  "result": {
+    "item": "randomthings:erbium_ring_tier_2"
+  }
+}

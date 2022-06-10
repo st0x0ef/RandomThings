@@ -1,26 +1,21 @@
 package com.gggame.randomthings;
 
-import com.gggame.randomthings.effect.EffectInit;
 import com.gggame.randomthings.entity.ModBlockEntities;
 import com.gggame.randomthings.init.BlockInit;
 import com.gggame.randomthings.init.ItemInit;
 import com.gggame.randomthings.init.WoodTypeInit;
-import com.gggame.randomthings.potion.PotionInit;
 import com.gggame.randomthings.screen.MenuTypes;
 import com.gggame.randomthings.screen.OreExtractorScreen;
-import com.gggame.randomthings.util.BetterBrewingRecipe;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -75,9 +70,6 @@ public class Main
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
 
-        EffectInit.MOB_EFFECTS.register(bus);
-        PotionInit.POTIONS.register(bus);
-
         ModBlockEntities.BLOCK_ENTITIES.register(bus);
         MenuTypes.MENUS.register(bus);
 
@@ -106,8 +98,6 @@ public class Main
         event.enqueueWork(() -> {
             Sheets.addWoodType(WoodTypeInit.CHERRY);
             Sheets.addWoodType(WoodTypeInit.MAPLE);
-
-            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, ItemInit.ERBIUM_CRYSTAL.get(), PotionInit.ERBIUM_POTION.get()));
         });
     }
 }

@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    " X ",
-    "XRX",
+    "PX ",
+    "X X",
     " X "
   ],
   "key":
   {
-    "R":
+    "P":
     {
-      "item": "randomthings:erbium_ring"
+      "item": "randomthings:nether_erbium_pearl"
     },
     "X":
     {
@@ -19,7 +19,7 @@
   },
   "result":
   {
-    "item": "randomthings:upgraded_erbium_ring",
+    "item": "randomthings:erbium_ring_tier_2",
     "count": 1
   }
 }

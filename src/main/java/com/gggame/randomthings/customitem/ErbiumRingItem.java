@@ -40,10 +40,12 @@ public class ErbiumRingItem extends Item {
             pPlayer.removeEffect(MobEffects.HARM);
             pPlayer.removeEffect(MobEffects.BAD_OMEN);
             pPlayer.removeEffect(MobEffects.GLOWING);
+            pPlayer.experienceLevel += 2;
             pPlayer.clearFire();
         }
         else if (tier == 2) {
             pPlayer.heal(2);
+            pPlayer.experienceLevel += 1;
             pPlayer.removeAllEffects();
             pPlayer.clearFire();
         }
