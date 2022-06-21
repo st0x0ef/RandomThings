@@ -1,0 +1,5 @@
+{
+  "type": "randomthings:ores",
+  "biomes": "#minecraft:is_nether",
+  "feature": "randomthings:nether_erbium_ore_placed"
+}

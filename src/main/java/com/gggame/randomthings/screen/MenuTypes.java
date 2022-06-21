@@ -13,6 +13,7 @@ public class MenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS = DeferredRegister.create(ForgeRegistries.CONTAINERS, Main.MOD_ID);
 
     public static final RegistryObject<MenuType<OreExtractorMenu>> ORE_EXTRACTOR_MENU = registerMenuType(OreExtractorMenu::new, "ore_extractor_menu");
+    public static final RegistryObject<MenuType<MapleFurnaceMenu>> MAPLE_FURNACE_MENU = registerMenuType(MapleFurnaceMenu::new, "maple_furnace_menu");
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

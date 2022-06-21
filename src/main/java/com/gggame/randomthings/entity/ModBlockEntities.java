@@ -12,4 +12,6 @@ public class ModBlockEntities {
 
     public static final RegistryObject<BlockEntityType<OreExtractorBlockEntity>> ORE_EXTRACTOR = BLOCK_ENTITIES.register("ore_extractor",
             () -> BlockEntityType.Builder.of(OreExtractorBlockEntity::new, BlockInit.ORE_EXTRACTOR.get()).build(null));
+    public static final RegistryObject<BlockEntityType<MapleFurnaceBlockEntity>> MAPLE_FURNACE = BLOCK_ENTITIES.register("maple_furnace",
+            () -> BlockEntityType.Builder.of(MapleFurnaceBlockEntity::new, BlockInit.MAPLE_FURNACE.get()).build(null));
 }

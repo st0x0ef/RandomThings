@@ -79,9 +79,9 @@
   "block.randomthings.nether_erbium_block": "Nether erbium block",
   "block.randomthings.end_erbium_block": "End erbium block",
   "tooltip.randomthings.shift": "§lSHIFT§r for more information",
-  "tooltip.randomthings.erbium_ring_tier_1": "Removes all effect of potions and restores one point of life",
-  "tooltip.randomthings.erbium_ring_tier_2": "Removes all effect of potions, removes the effects of fire and restores two points of life",
-  "tooltip.randomthings.erbium_ring_tier_3": "Removes bad effect of potions, removes the effects of fire and restores three points of life",
+  "tooltip.randomthings.erbium_ring_tier_1": "Removes all effect of potions, removes the effects of fire and restores one point of life",
+  "tooltip.randomthings.erbium_ring_tier_2": "Removes all effect of potions, removes the effects of fire, add one level of experience and restores two points of life",
+  "tooltip.randomthings.erbium_ring_tier_3": "Removes bad effect of potions, removes the effects of fire, add two level of experience and restores three points of life",
   "item.randomthings.erbium_crystal": "Erbium crystal",
   "item.minecraft.potion.effect.erbium_potion": "Erbium potion",
   "item.minecraft.splash_potion.effect.erbium_potion": "Splash erbium potion",
@@ -111,5 +111,8 @@
   "block.randomthings.diorite_brick_stairs": "Diorite brick stairs",
   "block.randomthings.andesite_brick_slab": "Andesite brick slab",
   "block.randomthings.andesite_brick_stairs": "Andesite brick stairs",
-  "block.randomthings.solid_lava": "Solid lava"
+  "block.randomthings.solid_lava": "Solid lava",
+  "block.randomthings.echo_block": "Echo block",
+  "item.randomthings.maple_taffy": "Maple taffy",
+  "item.randomthings.maple_sugar": "Maple sugar"
 }

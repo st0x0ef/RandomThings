@@ -6,6 +6,8 @@ import com.gggame.randomthings.init.ItemInit;
 import com.gggame.randomthings.init.WoodTypeInit;
 import com.gggame.randomthings.screen.MenuTypes;
 import com.gggame.randomthings.screen.OreExtractorScreen;
+import com.gggame.randomthings.world.ModPlacedFeature;
+import com.gggame.randomthings.world.biomemodifiers.ModBiomeModifiers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -73,25 +75,12 @@ public class Main
         ModBlockEntities.BLOCK_ENTITIES.register(bus);
         MenuTypes.MENUS.register(bus);
 
-        bus.addListener(this::clientSetup);
+        ModPlacedFeature.register(bus);
+        ModBiomeModifiers.register(bus);
+
         bus.addListener(this::setup);
 
         MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void clientSetup(final FMLClientSetupEvent event) {
-        ItemBlockRenderTypes.setRenderLayer(BlockInit.ORE_EXTRACTOR.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(BlockInit.CHERRY_LEAVES.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(BlockInit.MAPLE_LEAVES.get(), RenderType.cutout());
-
-        ItemBlockRenderTypes.setRenderLayer(BlockInit.CHERRY_SAPLING.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(BlockInit.MAPLE_SAPLING.get(), RenderType.cutout());
-
-        MenuScreens.register(MenuTypes.ORE_EXTRACTOR_MENU.get(), OreExtractorScreen::new);
-
-        WoodType.register(WoodTypeInit.CHERRY);
-        WoodType.register(WoodTypeInit.MAPLE);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

@@ -1,26 +1,18 @@
 package com.gggame.randomthings.customitem;
 
 import com.gggame.randomthings.init.ItemInit;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.SimpleContainer;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.Objects;
-import java.util.Random;
 
 public class RandomItem extends Item {
     public RandomItem(Properties pProperties) {
@@ -53,11 +45,17 @@ public class RandomItem extends Item {
             else if (value < 11 /* 4% chance*/) {
                 give(pPlayer, ItemInit.SILVER_SWORD.get(), 1);
             }
-            else if (value < 23 /* 10% chance*/) {
+            else if (value < 11.8 /* 0.8% chance*/) {
+                give(pPlayer, Items.RECOVERY_COMPASS, 1);
+            }
+            else if (value < 19.8 /* 8% chance*/) {
                 give(pPlayer, Items.DIAMOND, 8);
             }
-            else if (value < 27 /* 4% chance*/) {
+            else if (value < 13.8 /* 4% chance*/) {
                 give(pPlayer, Items.DIAMOND, 16);
+            }
+            else if (value < 17 /* 3.2% chance*/) {
+                give(pPlayer, Items.ECHO_SHARD, 8);
             }
             else if (value < 32 /* 5% chance*/) {
                 give(pPlayer, Items.DIAMOND_AXE, 1);
@@ -107,10 +105,16 @@ public class RandomItem extends Item {
             else if (value < 91 /* 2% chance*/) {
                 give(pPlayer, Items.AMETHYST_SHARD, 16);
             }
-            else if (value < 92 /* 1% chance*/) {
+            else if (value < 91.5 /* 0.5% chance*/) {
+                give(pPlayer, Items.GLOW_ITEM_FRAME, 16);
+            }
+            else if (value < 92 /* 0.5% chance*/) {
+                give(pPlayer, Items.ITEM_FRAME, 16);
+            }
+            else if (value < 92.5 /* 0.5% chance*/) {
                 give(pPlayer, Items.BEACON, 1);
             }
-            else if (value < 95 /* 3% chance*/) {
+            else if (value < 95 /* 2.5% chance*/) {
                 give(pPlayer, Items.CHORUS_FRUIT, 16);
             }
             else if (value < 97 /* 2% chance*/) {
@@ -154,6 +158,6 @@ public class RandomItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.random_item"));
+        pTooltipComponents.add(Component.translatable("tooltip.randomthings.random_item"));
     }
 }

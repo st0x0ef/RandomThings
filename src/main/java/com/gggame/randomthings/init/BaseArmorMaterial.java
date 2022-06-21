@@ -23,7 +23,7 @@ public enum BaseArmorMaterial implements ArmorMaterial {
     NETHER_ERBIUM("nether_erbium", 50, new int[]{6, 9, 11, 5}, 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.5F, 0.3F, () -> {
         return Ingredient.of(ItemInit.NETHER_ERBIUM_GEM.get());
     }),
-    END_ERBIUM("end_erbium", 50, new int[]{8, 11, 13, 6}, 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 5F, 0.5F, () -> {
+    END_ERBIUM("end_erbium", 60, new int[]{8, 11, 13, 6}, 18, SoundEvents.ARMOR_EQUIP_DIAMOND, 5F, 0.5F, () -> {
         return Ingredient.of(ItemInit.END_ERBIUM_GEM.get());
     });
 

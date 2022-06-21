@@ -1,6 +1,7 @@
 package com.gggame.randomthings.event.loot;
 
 import com.google.gson.JsonObject;
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.Item;
@@ -25,7 +26,7 @@ public class EndErbiumGemInEndCitiesAdditionModifier extends LootModifier {
 
     @Nonnull
     @Override
-    protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
+    protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         if(context.getRandom().nextFloat() < 0.75f) {
             generatedLoot.add(new ItemStack(addition, new Random().nextInt(2) + 1));
         }

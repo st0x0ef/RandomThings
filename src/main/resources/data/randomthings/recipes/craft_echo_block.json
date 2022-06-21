@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:echo_block",
+    "count": 1
+  }
+}

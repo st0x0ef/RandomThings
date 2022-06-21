@@ -1,0 +1,5 @@
+{
+  "type": "randomthings:ores",
+  "biomes": "#minecraft:is_end",
+  "feature": "randomthings:end_erbium_ore_placed"
+}

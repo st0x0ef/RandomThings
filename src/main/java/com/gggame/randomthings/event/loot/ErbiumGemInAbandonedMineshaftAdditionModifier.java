@@ -1,6 +1,7 @@
 package com.gggame.randomthings.event.loot;
 
 import com.google.gson.JsonObject;
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.Item;
@@ -12,7 +13,6 @@ import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nonnull;
-import java.util.List;
 import java.util.Random;
 
 public class ErbiumGemInAbandonedMineshaftAdditionModifier extends LootModifier {
@@ -25,7 +25,7 @@ public class ErbiumGemInAbandonedMineshaftAdditionModifier extends LootModifier 
 
     @Nonnull
     @Override
-    protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
+    protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
         if(context.getRandom().nextFloat() < 0.05f) {
             generatedLoot.add(new ItemStack(addition, new Random().nextInt(2) + 1));
         }

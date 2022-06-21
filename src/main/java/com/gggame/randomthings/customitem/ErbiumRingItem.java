@@ -2,7 +2,6 @@ package com.gggame.randomthings.customitem;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffects;
@@ -41,19 +40,18 @@ public class ErbiumRingItem extends Item {
             pPlayer.removeEffect(MobEffects.BAD_OMEN);
             pPlayer.removeEffect(MobEffects.GLOWING);
             pPlayer.experienceLevel += 2;
-            pPlayer.clearFire();
         }
         else if (tier == 2) {
             pPlayer.heal(2);
             pPlayer.experienceLevel += 1;
             pPlayer.removeAllEffects();
-            pPlayer.clearFire();
         }
         else {
             pPlayer.heal(1);
             pPlayer.removeAllEffects();
         }
 
+        pPlayer.clearFire();
         pPlayer.getItemInHand(pUsedHand).hurtAndBreak(1, pPlayer, (player) ->  player.broadcastBreakEvent(player.getUsedItemHand()));
 
         return super.use(pLevel, pPlayer, pUsedHand);
@@ -63,17 +61,17 @@ public class ErbiumRingItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (Screen.hasShiftDown()) {
             if (tier == 3) {
-                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring_tier_3"));
+                pTooltipComponents.add(Component.translatable("tooltip.randomthings.erbium_ring_tier_3"));
             }
             else if (tier == 2) {
-                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring_tier_2"));
+                pTooltipComponents.add(Component.translatable("tooltip.randomthings.erbium_ring_tier_2"));
             }
             else {
-                pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.erbium_ring_tier_1"));
+                pTooltipComponents.add(Component.translatable("tooltip.randomthings.erbium_ring_tier_1"));
             }
         }
         else {
-            pTooltipComponents.add(new TranslatableComponent("tooltip.randomthings.shift"));
+            pTooltipComponents.add(Component.translatable("tooltip.randomthings.shift"));
         }
     }
 }

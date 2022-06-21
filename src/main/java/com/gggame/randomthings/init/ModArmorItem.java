@@ -22,8 +22,8 @@ public class ModArmorItem extends ArmorItem {
     }
 
     @Override
-    public void onArmorTick(ItemStack stack, Level level, Player player) {
-        if(!level.isClientSide()) {
+    public void onArmorTick(ItemStack stack, Level world, Player player) {
+        if(!world.isClientSide()) {
             if(hasFullSuitOfArmorOn(player)) {
                 evaluateArmorEffects(player);
             }
@@ -62,6 +62,12 @@ public class ModArmorItem extends ArmorItem {
     }
 
     private boolean hasCorrectArmorOn(ArmorMaterial material, Player player) {
+        for (ItemStack armorStack: player.getInventory().armor) {
+            if(!(armorStack.getItem() instanceof ArmorItem)) {
+                return false;
+            }
+        }
+
         ArmorItem boots = ((ArmorItem)player.getInventory().getArmor(0).getItem());
         ArmorItem leggings = ((ArmorItem)player.getInventory().getArmor(1).getItem());
         ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmor(2).getItem());

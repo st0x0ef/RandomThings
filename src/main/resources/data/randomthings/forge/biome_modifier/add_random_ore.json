@@ -1,0 +1,5 @@
+{
+  "type": "randomthings:ores",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "randomthings:random_ore_placed"
+}

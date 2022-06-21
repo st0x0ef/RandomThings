@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "randomthings:block/maple_furnace",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "randomthings:block/maple_furnace"
+    },
+    "facing=south": {
+      "model": "randomthings:block/maple_furnace",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "randomthings:block/maple_furnace",
+      "y": 270
+    }
+  }
+}

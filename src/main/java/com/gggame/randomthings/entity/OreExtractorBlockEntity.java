@@ -4,11 +4,11 @@ package com.gggame.randomthings.entity;
 import com.gggame.randomthings.init.BlockInit;
 import com.gggame.randomthings.init.ItemInit;
 import com.gggame.randomthings.screen.OreExtractorMenu;
+import com.gggame.randomthings.util.SetStackInSlot;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -82,7 +82,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
 
     @Override
     public @NotNull Component getDisplayName() {
-        return new TextComponent("Ore extractor");
+        return Component.literal("Ore extractor");
     }
 
     @Nullable
@@ -115,7 +115,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
 
     @Override
     protected void saveAdditional(@NotNull CompoundTag tag) {
-        tag.put("inventory", itemHandler.serializeNBT());
+        tag.put("extractor.inventory", itemHandler.serializeNBT());
         tag.putInt("extractor.progress", progress);
         tag.putInt("extractor.fuelTime", fuelTime);
         tag.putInt("extractor.maxFuelTime", maxFuelTime);
@@ -125,10 +125,10 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
     @Override
     public void load(@NotNull CompoundTag nbt) {
         super.load(nbt);
-        itemHandler.deserializeNBT(nbt.getCompound("inventory"));
+        itemHandler.deserializeNBT(nbt.getCompound("extractor.inventory"));
         progress = nbt.getInt("extractor.progress");
         fuelTime = nbt.getInt("extractor.fuelTime");
-        maxFuelTime = nbt.getInt("blaster.maxFuelTime");
+        maxFuelTime = nbt.getInt("extractor.maxFuelTime");
     }
 
     public void drops() {
@@ -178,39 +178,39 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
         }
 
         if (recipeId(entity) == 0) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt));
-            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+            new SetStackInSlot(entity.itemHandler, 2, ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt);
+            new SetStackInSlot(entity.itemHandler, 3, Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
         }
         else if (recipeId(entity) == 1) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt));
-            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+            new SetStackInSlot(entity.itemHandler, 2, ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt);
+            new SetStackInSlot(entity.itemHandler, 3, Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
         }
 
         else if (recipeId(entity) == 2) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt));
-            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt);
+            new SetStackInSlot(entity.itemHandler, 3, Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
         }
         else if (recipeId(entity) == 3) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt));
-            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt);
+            new SetStackInSlot(entity.itemHandler, 3, Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
         }
 
         else if (recipeId(entity) == 4) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt));
-            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt);
+            new SetStackInSlot(entity.itemHandler, 3, Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
         }
         else if (recipeId(entity) == 5) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt));
-            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt);
+            new SetStackInSlot(entity.itemHandler, 3, Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
         }
 
         else if (recipeId(entity) == 6) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt));
-            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt);
+            new SetStackInSlot(entity.itemHandler, 3, Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
         }
         else if (recipeId(entity) == 7) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt));
-            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt);
+            new SetStackInSlot(entity.itemHandler, 3, Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
         }
 
         entity.resetProgress();

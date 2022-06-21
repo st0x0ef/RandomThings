@@ -79,9 +79,9 @@
   "block.randomthings.nether_erbium_block": "Block d'erbium du nether",
   "block.randomthings.end_erbium_block": "Block d'erbium de l'end",
   "tooltip.randomthings.shift": "§lSHIFT§r pour plus d'information",
-  "tooltip.randomthings.erbium_ring_tier_1": "Supprime l'effet des potions et redonne un point de vie.",
-  "tooltip.randomthings.erbium_ring_tier_2": "Supprime l'effet des potions, supprime les effets du feu et redonne deux points de vie.",
-  "tooltip.randomthings.erbium_ring_tier_3": "Supprime l'effet des potions négative, supprime les effets du feu et redonne trois points de vie.",
+  "tooltip.randomthings.erbium_ring_tier_1": "Supprime l'effet des potions, supprime les effets du feu et redonne un point de vie.",
+  "tooltip.randomthings.erbium_ring_tier_2": "Supprime l'effet des potions, supprime les effets du feu, ajoute un niveau d'experience et redonne deux points de vie.",
+  "tooltip.randomthings.erbium_ring_tier_3": "Supprime l'effet des potions négatives, supprime les effets du feu, ajoute deux niveaux d'experience et redonne trois points de vie.",
   "item.randomthings.erbium_crystal": "Crystal en erbium",
   "item.minecraft.potion.effect.erbium_potion": "Potion d'erbium",
   "item.minecraft.splash_potion.effect.erbium_potion": "Potion jetable d'erbium",
@@ -111,5 +111,8 @@
   "block.randomthings.diorite_brick_stairs": "Escalier en brique de granite",
   "block.randomthings.andesite_brick_slab": "Dalle en brique d'andesite",
   "block.randomthings.andesite_brick_stairs": "Escaliers en brique d'andesite",
-  "block.randomthings.solid_lava": "Lave solide"
+  "block.randomthings.solid_lava": "Lave solide",
+  "block.randomthings.echo_block": "Bloc d'écho",
+  "item.randomthings.maple_taffy": "Tir d'érable",
+  "item.randomthings.maple_sugar": "Sucre d'érable"
 }

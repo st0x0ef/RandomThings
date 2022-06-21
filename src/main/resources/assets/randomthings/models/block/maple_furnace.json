@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "randomthings:block/maple_furnace_front",
+    "side": "randomthings:block/maple_furnace_side",
+    "top": "randomthings:block/maple_furnace_top"
+  }
+}

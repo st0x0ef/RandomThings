@@ -66,6 +66,10 @@ public class ItemInit {
             () -> new Item(new Item.Properties().food(FoodInit.MAPLE_SYRUP).tab(Main.RANDOMTHINGS_FOOD_TAB)));
     public static final RegistryObject<Item> MAPLE_WATER_BOTTLE = register("maple_water_bottle",
             () -> new Item(new Item.Properties().food(FoodInit.MAPLE_WATER).tab(Main.RANDOMTHINGS_FOOD_TAB)));
+    public static final RegistryObject<Item> MAPLE_TAFFY = register("maple_taffy",
+            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_TAFFY).tab(Main.RANDOMTHINGS_FOOD_TAB)));
+    public static final RegistryObject<Item> MAPLE_SUGAR = register("maple_sugar",
+            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_SUGAR).tab(Main.RANDOMTHINGS_FOOD_TAB)));
 
     public static final RegistryObject<Item> ERBIUM_GEM = register("erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
     public static final RegistryObject<Item> ERBIUM_PEARL = register("erbium_pearl", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));

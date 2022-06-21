@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "randomthings:echo_block"
+    }
+  ],
+  "result": {
+    "item": "minecraft:echo_shard",
+    "count": 9
+  }
+}

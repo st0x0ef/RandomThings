@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "ACB"
+  ],
+  "key":
+  {
+    "A":
+    {
+      "item": "minecraft:black_dye"
+    },
+    "C":
+    {
+      "item": "minecraft:clay"
+    },
+    "B":
+    {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:degrade_block_lime",
+    "count": 1
+  }
+}
