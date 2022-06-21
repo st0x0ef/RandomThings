@@ -28,5 +28,7 @@ this mod is disponible in :
 ## forge requirement : 
 
 v1.1.0 - now : forge 41.0.38
+
 v1.0.1 - 1.0.14 : forge 40.1.2
+
 v1.0.0 : forge 40.0.32
