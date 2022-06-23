@@ -70,7 +70,8 @@ public class ModConfiguredFeature {
             OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), BlockInit.END_ERBIUM_ORE.get().defaultBlockState()));
 
     public static final List<OreConfiguration.TargetBlockState> SOLID_LAVA_ORE_REPLACEABLES = List.of(
-            OreConfiguration.target(OreFeatures.NETHERRACK, BlockInit.SOLID_LAVA.get().defaultBlockState()));
+            OreConfiguration.target(OreFeatures.NETHERRACK, BlockInit.SOLID_LAVA.get().defaultBlockState()),
+            OreConfiguration.target(new BlockMatchTest(Blocks.MAGMA_BLOCK), BlockInit.SOLID_LAVA.get().defaultBlockState()));
 
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_RANDOM_ORE_REPLACEABLES = List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockInit.RANDOM_ORE.get().defaultBlockState()),
