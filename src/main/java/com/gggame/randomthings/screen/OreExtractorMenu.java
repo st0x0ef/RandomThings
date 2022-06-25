@@ -1,6 +1,6 @@
 package com.gggame.randomthings.screen;
 
-import com.gggame.randomthings.entity.OreExtractorBlockEntity;
+import com.gggame.randomthings.customblock.entity.OreExtractorBlockEntity;
 import com.gggame.randomthings.init.BlockInit;
 import com.gggame.randomthings.screen.slot.FuelSlot;
 import com.gggame.randomthings.screen.slot.ResultSlot;

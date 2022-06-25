@@ -1,5 +1,5 @@
 
-package com.gggame.randomthings.entity;
+package com.gggame.randomthings.customblock.entity;
 
 import com.gggame.randomthings.init.ItemInit;
 import com.gggame.randomthings.screen.MapleFurnaceMenu;

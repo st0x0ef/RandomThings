@@ -1,5 +1,5 @@
 
-package com.gggame.randomthings.entity;
+package com.gggame.randomthings.customblock.entity;
 
 import com.gggame.randomthings.init.BlockInit;
 import com.gggame.randomthings.init.ItemInit;
@@ -16,7 +16,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
@@ -56,21 +55,21 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
         super(ModBlockEntities.ORE_EXTRACTOR.get(), pWorldPosition, pBlockState);
         this.data = new ContainerData() {
             public int get(int index) {
-                return switch (index) {
-                    case 0 -> OreExtractorBlockEntity.this.progress;
-                    case 1 -> OreExtractorBlockEntity.this.maxProgress;
-                    case 2 -> OreExtractorBlockEntity.this.fuelTime;
-                    case 3 -> OreExtractorBlockEntity.this.maxFuelTime;
-                    default -> 0;
-                };
+                switch (index) {
+                    case 0: return OreExtractorBlockEntity.this.progress;
+                    case 1: return OreExtractorBlockEntity.this.maxProgress;
+                    case 2: return OreExtractorBlockEntity.this.fuelTime;
+                    case 3: return OreExtractorBlockEntity.this.maxFuelTime;
+                    default: return 0;
+                }
             }
 
             public void set(int index, int value) {
-                switch (index) {
-                    case 0 -> OreExtractorBlockEntity.this.progress = value;
-                    case 1 -> OreExtractorBlockEntity.this.maxProgress = value;
-                    case 2 -> OreExtractorBlockEntity.this.fuelTime = value;
-                    case 3 -> OreExtractorBlockEntity.this.maxFuelTime = value;
+                switch(index) {
+                    case 0: OreExtractorBlockEntity.this.progress = value; break;
+                    case 1: OreExtractorBlockEntity.this.maxProgress = value; break;
+                    case 2: OreExtractorBlockEntity.this.fuelTime = value; break;
+                    case 3: OreExtractorBlockEntity.this.maxFuelTime = value; break;
                 }
             }
 
@@ -87,7 +86,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
 
     @Nullable
     @Override
-    public AbstractContainerMenu createMenu(int pContainerId, @NotNull Inventory pInventory, @NotNull Player pPlayer) {
+    public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
         return new OreExtractorMenu(pContainerId, pInventory, this, this.data);
     }
 
@@ -115,7 +114,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
 
     @Override
     protected void saveAdditional(@NotNull CompoundTag tag) {
-        tag.put("extractor.inventory", itemHandler.serializeNBT());
+        tag.put("inventory", itemHandler.serializeNBT());
         tag.putInt("extractor.progress", progress);
         tag.putInt("extractor.fuelTime", fuelTime);
         tag.putInt("extractor.maxFuelTime", maxFuelTime);
@@ -125,7 +124,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
     @Override
     public void load(@NotNull CompoundTag nbt) {
         super.load(nbt);
-        itemHandler.deserializeNBT(nbt.getCompound("extractor.inventory"));
+        itemHandler.deserializeNBT(nbt.getCompound("inventory"));
         progress = nbt.getInt("extractor.progress");
         fuelTime = nbt.getInt("extractor.fuelTime");
         maxFuelTime = nbt.getInt("extractor.maxFuelTime");

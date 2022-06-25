@@ -1,4 +1,4 @@
-package com.gggame.randomthings.entity;
+package com.gggame.randomthings.customblock.entity;
 
 import com.gggame.randomthings.Main;
 import com.gggame.randomthings.init.BlockInit;

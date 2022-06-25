@@ -22,6 +22,22 @@ public class ItemInit {
 
     public static final RegistryObject<Item> UPGRADED_NETHERITE_INGOT = register("upgraded_netherite_ingot", () -> new Item(new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_ORE_TAB)));
 
+    public static final RegistryObject<Item> ERBIUM_GEM = register("erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+    public static final RegistryObject<Item> ERBIUM_PEARL = register("erbium_pearl", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+    public static final RegistryObject<Item> NETHER_ERBIUM_GEM = register("nether_erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+    public static final RegistryObject<Item> NETHER_ERBIUM_PEARL = register("nether_erbium_pearl", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+    public static final RegistryObject<Item> END_ERBIUM_GEM = register("end_erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+    public static final RegistryObject<Item> END_ERBIUM_PEARL = register("end_erbium_pearl", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+
+    public static final RegistryObject<Item> ERBIUM_RING_TIER_1 = register("erbium_ring_tier_1", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(30).rarity(Rarity.UNCOMMON), 1));
+    public static final RegistryObject<Item> ERBIUM_RING_TIER_2 = register("erbium_ring_tier_2", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(80).rarity(Rarity.UNCOMMON), 2));
+    public static final RegistryObject<Item> ERBIUM_RING_TIER_3 = register("erbium_ring_tier_3", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(150).rarity(Rarity.UNCOMMON), 3));
+
+    public static final RegistryObject<Item> ERBIUM_CRYSTAL = register("erbium_crystal", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+
+    public static final RegistryObject<Item> SAP_SPOUT = register("sap_spout", () -> new SapSpoutItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(12)));
+    public static final RegistryObject<Item> RANDOM_ITEM = register("random_item", () -> new RandomItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(1)));
+
     // tool
     public static final RegistryObject<SwordItem> SILVER_SWORD = register("silver_sword", () -> new SwordItem(ItemMaterialInit.SILVER, 3, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
     public static final RegistryObject<PickaxeItem> SILVER_PICKAXE = register("silver_pickaxe", () -> new PickaxeItem(ItemMaterialInit.SILVER, 2, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
@@ -62,30 +78,6 @@ public class ItemInit {
             () -> new ArmorItem(BaseArmorMaterial.UPGRADED_NETHERITE, EquipmentSlot.FEET,
                     new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
 
-    public static final RegistryObject<Item> MAPLE_SYRUP_BOTTLE = register("maple_syrup_bottle",
-            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_SYRUP).tab(Main.RANDOMTHINGS_FOOD_TAB)));
-    public static final RegistryObject<Item> MAPLE_WATER_BOTTLE = register("maple_water_bottle",
-            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_WATER).tab(Main.RANDOMTHINGS_FOOD_TAB)));
-    public static final RegistryObject<Item> MAPLE_TAFFY = register("maple_taffy",
-            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_TAFFY).tab(Main.RANDOMTHINGS_FOOD_TAB)));
-    public static final RegistryObject<Item> MAPLE_SUGAR = register("maple_sugar",
-            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_SUGAR).tab(Main.RANDOMTHINGS_FOOD_TAB)));
-
-    public static final RegistryObject<Item> ERBIUM_GEM = register("erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
-    public static final RegistryObject<Item> ERBIUM_PEARL = register("erbium_pearl", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
-    public static final RegistryObject<Item> NETHER_ERBIUM_GEM = register("nether_erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
-    public static final RegistryObject<Item> NETHER_ERBIUM_PEARL = register("nether_erbium_pearl", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
-    public static final RegistryObject<Item> END_ERBIUM_GEM = register("end_erbium_gem", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
-    public static final RegistryObject<Item> END_ERBIUM_PEARL = register("end_erbium_pearl", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
-
-    public static final RegistryObject<Item> ERBIUM_RING_TIER_1 = register("erbium_ring_tier_1", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(30).rarity(Rarity.UNCOMMON), 1));
-    public static final RegistryObject<Item> ERBIUM_RING_TIER_2 = register("erbium_ring_tier_2", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(80).rarity(Rarity.UNCOMMON), 2));
-    public static final RegistryObject<Item> ERBIUM_RING_TIER_3 = register("erbium_ring_tier_3", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(150).rarity(Rarity.UNCOMMON), 3));
-
-    public static final RegistryObject<Item> ERBIUM_CRYSTAL = register("erbium_crystal", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
-
-    public static final RegistryObject<Item> SAP_SPOUT = register("sap_spout", () -> new SapSpoutItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(12)));
-
     public static final RegistryObject<Item> ERBIUM_HELMET = register("erbium_helmet",
             () -> new ModArmorItem(BaseArmorMaterial.ERBIUM, EquipmentSlot.HEAD,
                     new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
@@ -125,7 +117,19 @@ public class ItemInit {
             () -> new ArmorItem(BaseArmorMaterial.END_ERBIUM, EquipmentSlot.FEET,
                     new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
 
-    public static final RegistryObject<Item> RANDOM_ITEM = register("random_item", () -> new RandomItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(1)));
+    // food
+    public static final RegistryObject<Item> MAPLE_SYRUP_BOTTLE = register("maple_syrup_bottle",
+            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_SYRUP).tab(Main.RANDOMTHINGS_FOOD_TAB)));
+    public static final RegistryObject<Item> MAPLE_WATER_BOTTLE = register("maple_water_bottle",
+            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_WATER).tab(Main.RANDOMTHINGS_FOOD_TAB)));
+    public static final RegistryObject<Item> MAPLE_TAFFY = register("maple_taffy",
+            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_TAFFY).tab(Main.RANDOMTHINGS_FOOD_TAB)));
+    public static final RegistryObject<Item> MAPLE_SUGAR = register("maple_sugar",
+            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_SUGAR).tab(Main.RANDOMTHINGS_FOOD_TAB)));
+
+
+
+
 
     private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
         return ITEMS.register(name, item);

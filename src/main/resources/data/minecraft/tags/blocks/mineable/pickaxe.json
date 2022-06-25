@@ -17,6 +17,7 @@
     "randomthings:end_erbium_ore",
     "randomthings:random_ore",
     "randomthings:deepslate_random_ore",
-    "randomthings:solid_lava"
+    "randomthings:solid_lava",
+    "randomthings:echo_block"
   ]
 }

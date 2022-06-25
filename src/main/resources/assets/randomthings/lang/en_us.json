@@ -114,5 +114,6 @@
   "block.randomthings.solid_lava": "Solid lava",
   "block.randomthings.echo_block": "Echo block",
   "item.randomthings.maple_taffy": "Maple taffy",
-  "item.randomthings.maple_sugar": "Maple sugar"
+  "item.randomthings.maple_sugar": "Maple sugar",
+  "block.randomthings.maple_furnace": "Maple furnace"
 }

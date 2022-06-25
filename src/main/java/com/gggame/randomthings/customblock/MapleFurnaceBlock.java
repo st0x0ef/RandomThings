@@ -1,7 +1,7 @@
 package com.gggame.randomthings.customblock;
 
-import com.gggame.randomthings.entity.ModBlockEntities;
-import com.gggame.randomthings.entity.MapleFurnaceBlockEntity;
+import com.gggame.randomthings.customblock.entity.ModBlockEntities;
+import com.gggame.randomthings.customblock.entity.MapleFurnaceBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
@@ -70,7 +70,7 @@ public class MapleFurnaceBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if (entity instanceof MapleFurnaceBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer) pPlayer), (MapleFurnaceBlockEntity) entity, pPos);
+                NetworkHooks.openGui(((ServerPlayer)pPlayer), (MapleFurnaceBlockEntity)entity, pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
