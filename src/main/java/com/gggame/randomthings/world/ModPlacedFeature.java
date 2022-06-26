@@ -9,7 +9,6 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -48,9 +47,4 @@ public class ModPlacedFeature {
     public static final RegistryObject<PlacedFeature>  SOLID_LAVA_PLACED = PLACED_FEATURE.register("solid_lava_placed", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>)SOLID_LAVA,
             OrePlacement.commonOrePlacement(16,
             HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(128)))));
-
-
-    public static void register(IEventBus bus) {
-        PLACED_FEATURE.register(bus);
-    }
 }

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "XXX",
+    "XFX",
+    "XXX"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:silver_ingot"
+    },
+    "F":
+    {
+      "item": "minecraft:blast_furnace"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:maple_furnace",
+    "count": 1
+  }
+}

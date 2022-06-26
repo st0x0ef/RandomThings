@@ -21,7 +21,7 @@ public class MapleFurnaceMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public MapleFurnaceMenu(int windowId, Inventory inv, FriendlyByteBuf extraData) {
-        this(windowId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(3));
+        this(windowId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(4));
     }
 
     public MapleFurnaceMenu(int windowId, Inventory inv, BlockEntity entity, ContainerData data) {

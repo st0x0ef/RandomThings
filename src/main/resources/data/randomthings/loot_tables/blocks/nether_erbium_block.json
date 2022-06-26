@@ -1,11 +1,12 @@
 {
+  "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 4,
+      "rolls": 1.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:echo_shard"
+          "name": "randomthings:nether_erbium_block"
         }
       ]
     }

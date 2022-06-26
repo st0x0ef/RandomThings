@@ -18,6 +18,8 @@
     "randomthings:random_ore",
     "randomthings:deepslate_random_ore",
     "randomthings:solid_lava",
-    "randomthings:echo_block"
+    "randomthings:echo_block",
+    "randomthings:maple_furnace",
+    "randomthings:ore_extractor"
   ]
 }

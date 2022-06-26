@@ -4,7 +4,6 @@ package com.gggame.randomthings.customblock.entity;
 import com.gggame.randomthings.init.BlockInit;
 import com.gggame.randomthings.init.ItemInit;
 import com.gggame.randomthings.screen.OreExtractorMenu;
-import com.gggame.randomthings.util.SetStackInSlot;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -16,6 +15,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
@@ -47,7 +47,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 100;
     private int fuelTime = 0;
     private int maxFuelTime = 0;
 
@@ -177,39 +177,39 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
         }
 
         if (recipeId(entity) == 0) {
-            new SetStackInSlot(entity.itemHandler, 2, ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt);
-            new SetStackInSlot(entity.itemHandler, 3, Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt));
+            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
         else if (recipeId(entity) == 1) {
-            new SetStackInSlot(entity.itemHandler, 2, ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt);
-            new SetStackInSlot(entity.itemHandler, 3, Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.RAW_SILVER.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt));
+            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
 
         else if (recipeId(entity) == 2) {
-            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt);
-            new SetStackInSlot(entity.itemHandler, 3, Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt));
+            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
         else if (recipeId(entity) == 3) {
-            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt);
-            new SetStackInSlot(entity.itemHandler, 3, Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_IRON, entity.itemHandler.getStackInSlot(2).getCount() + qt));
+            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
 
         else if (recipeId(entity) == 4) {
-            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt);
-            new SetStackInSlot(entity.itemHandler, 3, Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt));
+            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
         else if (recipeId(entity) == 5) {
-            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt);
-            new SetStackInSlot(entity.itemHandler, 3, Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_COPPER, entity.itemHandler.getStackInSlot(2).getCount() + qt));
+            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
 
         else if (recipeId(entity) == 6) {
-            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt);
-            new SetStackInSlot(entity.itemHandler, 3, Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt));
+            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
         else if (recipeId(entity) == 7) {
-            new SetStackInSlot(entity.itemHandler, 2, Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt);
-            new SetStackInSlot(entity.itemHandler, 3, Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(Items.RAW_GOLD, entity.itemHandler.getStackInSlot(2).getCount() + qt));
+            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
 
         entity.resetProgress();

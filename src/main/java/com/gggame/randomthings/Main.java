@@ -28,7 +28,7 @@ public class Main
         @Override
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(ItemInit.SILVER_INGOT.get());
+            return new ItemStack(ItemInit.ERBIUM_RING_TIER_3.get());
         }
     };
     public static final CreativeModeTab RANDOMTHINGS_TOOL_AND_ARMOR_TAB = new CreativeModeTab("randomthings_tool_and_armor_tab") {
@@ -69,8 +69,8 @@ public class Main
         ModBlockEntities.BLOCK_ENTITIES.register(bus);
         MenuTypes.MENUS.register(bus);
 
-        ModPlacedFeature.register(bus);
-        ModBiomeModifiers.register(bus);
+        ModPlacedFeature.PLACED_FEATURE.register(bus);
+        ModBiomeModifiers.BIOME_MODIFIERS.register(bus);
 
         bus.addListener(this::setup);
 

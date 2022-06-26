@@ -3,7 +3,6 @@ package com.gggame.randomthings.customblock.entity;
 
 import com.gggame.randomthings.init.ItemInit;
 import com.gggame.randomthings.screen.MapleFurnaceMenu;
-import com.gggame.randomthings.util.SetStackInSlot;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -15,6 +14,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -43,7 +43,7 @@ public class MapleFurnaceBlockEntity extends BlockEntity implements MenuProvider
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 500;
     private int fuelTime = 0;
     private int maxFuelTime = 0;
 
@@ -167,10 +167,10 @@ public class MapleFurnaceBlockEntity extends BlockEntity implements MenuProvider
         entity.itemHandler.extractItem(1, 1, false);
 
         if (recipeId(entity) == 0) {
-            new SetStackInSlot(entity.itemHandler, 2, ItemInit.MAPLE_TAFFY.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.MAPLE_TAFFY.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1));
         }
         if (recipeId(entity) == 1) {
-            new SetStackInSlot(entity.itemHandler, 2, ItemInit.MAPLE_SUGAR.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1);
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.MAPLE_SUGAR.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1));
         }
 
 

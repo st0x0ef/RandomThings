@@ -13,7 +13,6 @@ import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nonnull;
-import java.util.List;
 import java.util.Random;
 
 public class EndErbiumGemInEndCitiesAdditionModifier extends LootModifier {
