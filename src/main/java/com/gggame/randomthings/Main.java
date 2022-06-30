@@ -49,7 +49,7 @@ public class Main
         @Override
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(BlockInit.ERBIUM_ORE.get().asItem());
+            return new ItemStack(BlockInit.RANDOM_ORE.get().asItem());
         }
     };
     public static final CreativeModeTab RANDOMTHINGS_FOOD_TAB = new CreativeModeTab("randomthings_food_tab") {

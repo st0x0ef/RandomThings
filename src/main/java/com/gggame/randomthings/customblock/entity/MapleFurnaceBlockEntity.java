@@ -167,9 +167,12 @@ public class MapleFurnaceBlockEntity extends BlockEntity implements MenuProvider
         entity.itemHandler.extractItem(1, 1, false);
 
         if (recipeId(entity) == 0) {
-            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.MAPLE_TAFFY.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1));
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.MAPLE_SYRUP_BOTTLE.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1));
         }
         if (recipeId(entity) == 1) {
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.MAPLE_TAFFY.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1));
+        }
+        if (recipeId(entity) == 2) {
             entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.MAPLE_SUGAR.get(), entity.itemHandler.getStackInSlot(2).getCount() + 1));
         }
 
@@ -178,6 +181,7 @@ public class MapleFurnaceBlockEntity extends BlockEntity implements MenuProvider
     }
 
     private static boolean hasRecipe(MapleFurnaceBlockEntity entity) {
+        if(entity.itemHandler.getStackInSlot(1).getItem() == ItemInit.MAPLE_WATER_BOTTLE.get().asItem()) return true;
         if(entity.itemHandler.getStackInSlot(1).getItem() == ItemInit.MAPLE_SYRUP_BOTTLE.get().asItem()) return true;
         if(entity.itemHandler.getStackInSlot(1).getItem() == ItemInit.MAPLE_TAFFY.get().asItem()) return true;
         return false;
@@ -186,8 +190,9 @@ public class MapleFurnaceBlockEntity extends BlockEntity implements MenuProvider
     private static int recipeId(MapleFurnaceBlockEntity entity) {
         if (!hasRecipe(entity)) return -1;
 
-        if(entity.itemHandler.getStackInSlot(1).getItem() == ItemInit.MAPLE_SYRUP_BOTTLE.get().asItem()) return 0;
-        if(entity.itemHandler.getStackInSlot(1).getItem() == ItemInit.MAPLE_TAFFY.get().asItem()) return 1;
+        if(entity.itemHandler.getStackInSlot(1).getItem() == ItemInit.MAPLE_WATER_BOTTLE.get().asItem()) return 0;
+        if(entity.itemHandler.getStackInSlot(1).getItem() == ItemInit.MAPLE_SYRUP_BOTTLE.get().asItem()) return 1;
+        if(entity.itemHandler.getStackInSlot(1).getItem() == ItemInit.MAPLE_TAFFY.get().asItem()) return 2;
 
         return -1;
     }

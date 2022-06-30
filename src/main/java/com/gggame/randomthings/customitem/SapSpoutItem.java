@@ -27,7 +27,8 @@ public class SapSpoutItem extends Item {
             Player pPlayer = pContext.getPlayer();
             BlockPos positionClicked = pContext.getClickedPos();
             if (pContext.getLevel().getBlockState(positionClicked).getBlock() == BlockInit.MAPLE_LOG.get()) {
-                pPlayer.drop(ItemInit.MAPLE_WATER_BOTTLE.get().getDefaultInstance(), false, false);
+                int qt = (int) Math.round(2 * Math.random() + 1); // 1 - 3
+                give(pPlayer, ItemInit.MAPLE_WATER_BOTTLE.get(), qt);
 
                 if (Math.random() < 0.1) {
                     pPlayer.level.removeBlock(positionClicked, false);
@@ -39,6 +40,11 @@ public class SapSpoutItem extends Item {
         }
 
         return super.useOn(pContext);
+    }
+
+    private void give(Player pPlayer, Item item, int quantity) {
+        ItemStack itemStack = new ItemStack(() -> item, quantity);
+        pPlayer.drop(itemStack, false, false);
     }
 
     @Override
