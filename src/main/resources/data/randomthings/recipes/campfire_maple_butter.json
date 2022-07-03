@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "randomthings:maple_sugar"
+  },
+  "result": "randomthings:maple_butter",
+  "experience": 10,
+  "cookingtime": 350
+}

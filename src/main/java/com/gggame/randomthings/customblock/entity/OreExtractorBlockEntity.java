@@ -212,6 +212,11 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
             entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.DEEPSLATE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
         }
 
+        else if (recipeId(entity) == 8) {
+            entity.itemHandler.setStackInSlot(2, new ItemStack(ItemInit.COBBLE_NUGGET.get(), entity.itemHandler.getStackInSlot(2).getCount() + qt));
+            entity.itemHandler.setStackInSlot(3, new ItemStack(Blocks.STONE.asItem(), entity.itemHandler.getStackInSlot(3).getCount() + 1));
+        }
+
         entity.resetProgress();
     }
 
@@ -226,7 +231,11 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
         if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_COPPER_ORE.asItem()) return true;
 
         if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.GOLD_ORE.asItem()) return true;
-        return entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_GOLD_ORE.asItem();
+        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_GOLD_ORE.asItem()) return true;
+
+        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.COBBLESTONE.asItem()) return true;
+
+        return false;
     }
 
     private static int recipeId(OreExtractorBlockEntity entity) {
@@ -243,6 +252,8 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
 
         if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.GOLD_ORE.asItem()) return 6;
         if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_GOLD_ORE.asItem()) return 7;
+
+        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.COBBLESTONE.asItem()) return 8;
 
         return -1;
     }

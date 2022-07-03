@@ -115,5 +115,7 @@
   "block.randomthings.echo_block": "Echo block",
   "item.randomthings.maple_taffy": "Maple taffy",
   "item.randomthings.maple_sugar": "Maple sugar",
-  "block.randomthings.maple_furnace": "Maple furnace"
+  "item.randomthings.maple_butter": "Maple butter",
+  "block.randomthings.maple_furnace": "Maple furnace",
+  "item.randomthings.cobble_nugget": "Cobble nugget"
 }

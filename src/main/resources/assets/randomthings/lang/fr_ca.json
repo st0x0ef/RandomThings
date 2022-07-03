@@ -115,5 +115,7 @@
   "block.randomthings.echo_block": "Bloc d'écho",
   "item.randomthings.maple_taffy": "Tir d'érable",
   "item.randomthings.maple_sugar": "Sucre d'érable",
-  "block.randomthings.maple_furnace": "Fourneau pour l'érable"
+  "item.randomthings.maple_butter": "Beurre d'érable",
+  "block.randomthings.maple_furnace": "Fourneau pour l'érable",
+  "item.randomthings.cobble_nugget": "Pépite de pierre"
 }

@@ -38,6 +38,7 @@ public class ItemInit {
     public static final RegistryObject<Item> SAP_SPOUT = register("sap_spout", () -> new SapSpoutItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(12)));
     public static final RegistryObject<Item> RANDOM_ITEM = register("random_item", () -> new RandomItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(1)));
 
+    public static final RegistryObject<Item> COBBLE_NUGGET = register("cobble_nugget", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB)));
     // tool
     public static final RegistryObject<SwordItem> SILVER_SWORD = register("silver_sword", () -> new SwordItem(ItemMaterialInit.SILVER, 3, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
     public static final RegistryObject<PickaxeItem> SILVER_PICKAXE = register("silver_pickaxe", () -> new PickaxeItem(ItemMaterialInit.SILVER, 2, 1.2f, new Item.Properties().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
@@ -126,8 +127,8 @@ public class ItemInit {
             () -> new Item(new Item.Properties().food(FoodInit.MAPLE_TAFFY).tab(Main.RANDOMTHINGS_FOOD_TAB)));
     public static final RegistryObject<Item> MAPLE_SUGAR = register("maple_sugar",
             () -> new Item(new Item.Properties().food(FoodInit.MAPLE_SUGAR).tab(Main.RANDOMTHINGS_FOOD_TAB)));
-
-
+    public static final RegistryObject<Item> MAPLE_BUTTER = register("maple_butter",
+            () -> new Item(new Item.Properties().food(FoodInit.MAPLE_BUTTER).tab(Main.RANDOMTHINGS_FOOD_TAB)));
 
 
 
