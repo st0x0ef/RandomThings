@@ -2,7 +2,6 @@ package com.gggame.randomthings.init;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
 

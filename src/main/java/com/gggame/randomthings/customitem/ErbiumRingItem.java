@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class ErbiumRingItem extends Item {
-    private int tier;
+    private final int tier;
 
     public ErbiumRingItem(Properties pProperties, int tier) {
         super(pProperties);
