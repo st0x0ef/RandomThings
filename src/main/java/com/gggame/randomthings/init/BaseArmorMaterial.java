@@ -17,13 +17,13 @@ public enum BaseArmorMaterial implements ArmorMaterial {
     UPGRADED_NETHERITE("upgraded_netherite", 45, new int[]{3, 6, 8, 3}, 12, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.2F, () -> {
         return Ingredient.of(ItemInit.UPGRADED_NETHERITE_INGOT.get());
     }),
-    ERBIUM("erbium", 35, new int[]{4, 7, 9, 4}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0F, () -> {
+    ERBIUM("erbium", 35, new int[]{4, 7, 9, 4}, 10, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0F, () -> {
         return Ingredient.of(ItemInit.ERBIUM_GEM.get());
     }),
-    NETHER_ERBIUM("nether_erbium", 50, new int[]{6, 9, 11, 5}, 15, SoundEvents.ARMOR_EQUIP_DIAMOND, 3.5F, 0.3F, () -> {
+    NETHER_ERBIUM("nether_erbium", 50, new int[]{6, 9, 11, 5}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.5F, 0.3F, () -> {
         return Ingredient.of(ItemInit.NETHER_ERBIUM_GEM.get());
     }),
-    END_ERBIUM("end_erbium", 60, new int[]{8, 11, 13, 6}, 18, SoundEvents.ARMOR_EQUIP_DIAMOND, 5F, 0.5F, () -> {
+    END_ERBIUM("end_erbium", 60, new int[]{8, 11, 13, 6}, 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 5F, 0.5F, () -> {
         return Ingredient.of(ItemInit.END_ERBIUM_GEM.get());
     });
 
