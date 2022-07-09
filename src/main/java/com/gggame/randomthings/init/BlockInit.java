@@ -75,7 +75,7 @@ public class BlockInit {
 
     public static final RegistryObject<Block> ANDESITE_BRICK_STAIRS = register("andesite_brick_stairs",
             () -> new StairBlock(() -> BlockInit.ANDESITE_BRICK.get().defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.DIORITE_STAIRS)),
+                    BlockBehaviour.Properties.copy(Blocks.ANDESITE_STAIRS)),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
 
     public static final RegistryObject<Block> ANDESITE_BRICK_SLAB = register("andesite_brick_slab",
@@ -99,6 +99,16 @@ public class BlockInit {
                 public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
                     return 5;
                 }}, object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
+    public static final RegistryObject<Block> CHERRY_PLANKS_STAIRS = register("cherry_planks_stairs",
+            () -> new StairBlock(() -> BlockInit.CHERRY_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(BlockInit.CHERRY_PLANKS.get())),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
+    public static final RegistryObject<Block> CHERRY_PLANKS_SLAB = register("cherry_planks_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockInit.CHERRY_PLANKS.get())),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
 
     public static final RegistryObject<Block> CHERRY_LOG = register("cherry_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).color(MaterialColor.COLOR_PINK))
@@ -152,6 +162,15 @@ public class BlockInit {
                 public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
                     return 5;
                 }}, object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
+    public static final RegistryObject<Block> MAPLE_PLANKS_STAIRS = register("maple_planks_stairs",
+            () -> new StairBlock(() -> BlockInit.MAPLE_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(BlockInit.MAPLE_PLANKS.get())),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
+
+    public static final RegistryObject<Block> MAPLE_PLANKS_SLAB = register("maple_planks_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockInit.MAPLE_PLANKS.get())),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Main.RANDOMTHINGS_DECORATION_TAB)));
 
     public static final RegistryObject<Block> MAPLE_LOG = register("maple_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG))

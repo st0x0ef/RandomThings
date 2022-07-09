@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "X  ",
+    "XX ",
+    "XXX"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "randomthings:maple_planks"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:maple_planks_stairs",
+    "count": 4
+  }
+}

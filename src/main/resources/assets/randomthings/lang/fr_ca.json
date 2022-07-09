@@ -117,5 +117,9 @@
   "item.randomthings.maple_sugar": "Sucre d'érable",
   "item.randomthings.maple_butter": "Beurre d'érable",
   "block.randomthings.maple_furnace": "Fourneau pour l'érable",
-  "item.randomthings.cobble_nugget": "Pépite de pierre"
+  "item.randomthings.cobble_nugget": "Pépite de pierre",
+  "block.randomthings.cherry_planks_slab": "Dalle en planche de cerisier",
+  "block.randomthings.cherry_planks_stairs": "Escalier en planche de cerisier",
+  "block.randomthings.maple_planks_slab": "Dalle en planche d'érable",
+  "block.randomthings.maple_planks_stairs": "Escalier en planche d'érable"
 }

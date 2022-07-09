@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "randomthings:block/cherry_planks",
+    "top": "randomthings:block/cherry_planks",
+    "side": "randomthings:block/cherry_planks"
+  }
+}

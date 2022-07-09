@@ -20,6 +20,12 @@
     "randomthings:solid_lava",
     "randomthings:echo_block",
     "randomthings:maple_furnace",
-    "randomthings:ore_extractor"
+    "randomthings:ore_extractor",
+    "randomthings:andesite_brick_slab",
+    "randomthings:diorite_brick_slab",
+    "randomthings:granite_brick_slab",
+    "randomthings:andesite_brick_stairs",
+    "randomthings:diorite_brick_stairs",
+    "randomthings:granite_brick_stairs"
   ]
 }

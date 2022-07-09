@@ -117,5 +117,9 @@
   "item.randomthings.maple_sugar": "Maple sugar",
   "item.randomthings.maple_butter": "Maple butter",
   "block.randomthings.maple_furnace": "Maple furnace",
-  "item.randomthings.cobble_nugget": "Cobble nugget"
+  "item.randomthings.cobble_nugget": "Cobble nugget",
+  "block.randomthings.cherry_planks_slab": "Cherry slab",
+  "block.randomthings.cherry_planks_stairs": "Cherry stairs",
+  "block.randomthings.maple_planks_slab": "Maple slab",
+  "block.randomthings.maple_planks_stairs": "Maple stairs"
 }

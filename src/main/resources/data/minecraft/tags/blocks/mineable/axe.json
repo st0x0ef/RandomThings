@@ -5,6 +5,10 @@
     "randomthings:cherry_log",
     "randomthings:maple_planks",
     "randomthings:maple_log",
-    "randomthings:maple_log_without_sap"
+    "randomthings:maple_log_without_sap",
+    "randomthings:cherry_planks_slab",
+    "randomthings:maple_planks_slab",
+    "randomthings:cherry_planks_stairs",
+    "randomthings:maple_planks_stairs"
   ]
 }
