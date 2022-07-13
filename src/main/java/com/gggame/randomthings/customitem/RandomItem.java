@@ -57,10 +57,16 @@ public class RandomItem extends Item {
             else if (value < 17 /* 3.2% chance*/) {
                 give(pPlayer, Items.ECHO_SHARD, 8);
             }
-            else if (value < 32 /* 5% chance*/) {
+            else if (value < 30 /* 3% chance*/) {
                 give(pPlayer, Items.DIAMOND_AXE, 1);
             }
-            else if (value < 41 /* 9% chance*/) {
+            else if (value < 32 /* 2% chance*/) {
+                give(pPlayer, Items.DIAMOND_SWORD, 1);
+            }
+            else if (value < 37 /* 5% chance*/) {
+                give(pPlayer, Items.IRON_INGOT, 16);
+            }
+            else if (value < 41 /* 4% chance*/) {
                 give(pPlayer, Items.IRON_INGOT, 32);
             }
             else if (value < 50 /* 9% chance*/) {

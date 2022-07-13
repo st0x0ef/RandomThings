@@ -32,7 +32,7 @@ public class SapSpoutItem extends Item {
 
                 if (Math.random() < 0.1) {
                     pPlayer.level.removeBlock(positionClicked, false);
-                    pPlayer.level.setBlock(positionClicked, BlockInit.MAPLE_LOG_WITHOUT_SAP.get().defaultBlockState(), 128);
+                    pPlayer.level.setBlock(positionClicked, BlockInit.MAPLE_LOG_WITHOUT_SAP.get().defaultBlockState(), 1);
                 }
 
                 pPlayer.getItemInHand(pContext.getHand()).hurtAndBreak(1, pPlayer, (player) ->  player.broadcastBreakEvent(player.getUsedItemHand()));

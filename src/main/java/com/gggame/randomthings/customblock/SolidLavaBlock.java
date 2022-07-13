@@ -5,6 +5,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -17,7 +18,6 @@ import net.minecraft.world.level.block.BubbleColumnBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 
-import java.util.Random;
 
 public class SolidLavaBlock extends Block {
     public SolidLavaBlock(BlockBehaviour.Properties pProperties) {
@@ -34,7 +34,7 @@ public class SolidLavaBlock extends Block {
         super.stepOn(pLevel, pPos, pState, pEntity);
     }
 
-    public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRand) {
+    public void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRand) {
         BubbleColumnBlock.updateColumn(pLevel, pPos.above(), pState);
     }
 
@@ -46,10 +46,10 @@ public class SolidLavaBlock extends Block {
         return super.updateShape(pState, pFacing, pFacingState, pLevel, pCurrentPos, pFacingPos);
     }
 
-    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
+    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         BlockPos blockpos = pPos.above();
         if (pLevel.getFluidState(pPos).is(FluidTags.WATER)) {
-            pLevel.setBlock(blockpos, Blocks.OBSIDIAN.defaultBlockState(), 128);
+            pLevel.setBlock(blockpos, Blocks.OBSIDIAN.defaultBlockState(), 1);
         }
 
     }
