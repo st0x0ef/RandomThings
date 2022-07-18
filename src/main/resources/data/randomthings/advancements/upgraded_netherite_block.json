@@ -8,6 +8,7 @@
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
+    "hidden": false,
     "background": "randomthings:textures/block/silver_block.png"
   },
   "parent": "randomthings:upgraded_netherite",

@@ -1,17 +1,17 @@
 {
   "display": {
     "icon": {
-      "item": "randomthings:upgraded_netherite_ingot"
+      "item": "randomthings:maple_syrup_bottle"
     },
-    "title": "Upgrade the best",
-    "description": "Why upgrade the best material?",
+    "title": "Give me maple syrup",
+    "description": "cook maple water",
+    "background": "randomthings:textures/block/silver_block.png",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false,
-    "background": "randomthings:textures/block/silver_block.png"
+    "hidden": false
   },
-  "parent": "randomthings:begin",
+  "parent": "randomthings:sap_spout",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -19,7 +19,7 @@
         "items": [
           {
             "items": [
-              "randomthings:upgraded_netherite_ingot"
+              "randomthings:maple_syrup_bottle"
             ]
           }
         ]

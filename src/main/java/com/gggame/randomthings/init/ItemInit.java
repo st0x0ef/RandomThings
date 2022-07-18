@@ -5,6 +5,7 @@ import com.gggame.randomthings.Main;
 import com.gggame.randomthings.customitem.ErbiumRingItem;
 import com.gggame.randomthings.customitem.RandomItem;
 import com.gggame.randomthings.customitem.SapSpoutItem;
+import com.gggame.randomthings.customitem.SuperFruitItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
@@ -129,6 +130,8 @@ public class ItemInit {
             () -> new Item(new Item.Properties().food(FoodInit.MAPLE_SUGAR).tab(Main.RANDOMTHINGS_FOOD_TAB)));
     public static final RegistryObject<Item> MAPLE_BUTTER = register("maple_butter",
             () -> new Item(new Item.Properties().food(FoodInit.MAPLE_BUTTER).tab(Main.RANDOMTHINGS_FOOD_TAB)));
+    public static final RegistryObject<Item> SUPER_FRUIT = register("super_fruit",
+            () -> new SuperFruitItem(new Item.Properties().food(FoodInit.CHORUS_FRUIT).tab(Main.RANDOMTHINGS_FOOD_TAB)));
 
 
 

@@ -1,15 +1,17 @@
 {
   "display": {
     "icon": {
-      "item": "randomthings:maple_water"
+      "item": "randomthings:sap_spout"
     },
     "title": "Give me maple water",
     "description": "Use sap spout on maple log",
+    "background": "randomthings:textures/block/silver_block.png",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
-    "background": "randomthings:textures/block/silver_block.png"
+    "hidden": false
   },
+  "parent": "randomthings:begin",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -17,7 +19,7 @@
         "items": [
           {
             "items": [
-              "randomthings:maple_water"
+              "randomthings:maple_water_bottle"
             ]
           }
         ]

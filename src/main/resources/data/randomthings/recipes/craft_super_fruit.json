@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "XXX",
+    "XCX",
+    "XXX"
+  ],
+  "key":
+  {
+    "X":
+    {
+      "item": "minecraft:echo_shard"
+    },
+    "C":
+    {
+      "item": "minecraft:chorus_fruit"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:super_fruit",
+    "count": 1
+  }
+}

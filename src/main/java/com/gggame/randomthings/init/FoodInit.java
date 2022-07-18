@@ -8,4 +8,5 @@ public class FoodInit {
     public static final FoodProperties MAPLE_TAFFY = new FoodProperties.Builder().nutrition(4).saturationMod(0.6f).build();
     public static final FoodProperties MAPLE_SUGAR = new FoodProperties.Builder().nutrition(3).saturationMod(1f).build();
     public static final FoodProperties MAPLE_BUTTER = new FoodProperties.Builder().nutrition(4).saturationMod(0.8f).build();
+    public static final FoodProperties CHORUS_FRUIT = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.3F).alwaysEat().build();
 }
