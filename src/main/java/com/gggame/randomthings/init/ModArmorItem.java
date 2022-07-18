@@ -15,7 +15,11 @@ import java.util.Map;
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(BaseArmorMaterial.UPGRADED_NETHERITE, new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0)).build();
+                    .put(BaseArmorMaterial.UPGRADED_NETHERITE, new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0))
+                    .put(BaseArmorMaterial.ERBIUM, new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 0))
+                    .put(BaseArmorMaterial.NETHER_ERBIUM, new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 1))
+                    .put(BaseArmorMaterial.END_ERBIUM, new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 2))
+                    .build();
 
     public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);

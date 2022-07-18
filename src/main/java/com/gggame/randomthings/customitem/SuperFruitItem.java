@@ -30,9 +30,9 @@ public class SuperFruitItem extends Item {
             double d1 = pEntityLiving.getY();
             double d2 = pEntityLiving.getZ();
 
-            for(int i = 0; i < 16; ++i) {
+            for(int i = 0; i < 32; i++) {
                 double d3 = pEntityLiving.getX() + (pEntityLiving.getRandom().nextDouble() - 0.5D) * 32.0D;
-                double d4 = Mth.clamp(pEntityLiving.getY() + (double)(pEntityLiving.getRandom().nextInt(16) - 8), (double)pLevel.getMinBuildHeight(), (double)(pLevel.getMinBuildHeight() + ((ServerLevel)pLevel).getLogicalHeight() - 1));
+                double d4 = Mth.clamp(pEntityLiving.getY() + (double)(pEntityLiving.getRandom().nextInt(32) - 16), (double)pLevel.getMinBuildHeight(), (double)(pLevel.getMinBuildHeight() + ((ServerLevel)pLevel).getLogicalHeight() - 1));
                 double d5 = pEntityLiving.getZ() + (pEntityLiving.getRandom().nextDouble() - 0.5D) * 32.0D;
                 if (pEntityLiving.isPassenger()) {
                     pEntityLiving.stopRiding();

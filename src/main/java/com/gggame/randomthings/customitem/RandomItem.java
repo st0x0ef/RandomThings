@@ -99,11 +99,14 @@ public class RandomItem extends Item {
             else if (value < 70 /* 8% chance*/) {
                 give(pPlayer, Items.FIRE_CHARGE, 2);
             }
-            else if (value < 80 /* 10% chance*/) {
+            else if (value < 78 /* 8% chance*/) {
                 give(pPlayer, Items.COAL, 32);
             }
-            else if (value < 85 /* 5% chance*/) {
+            else if (value < 83 /* 5% chance*/) {
                 give(pPlayer, Items.COAL, 64);
+            }
+            else if (value < 85 /* 2% chance*/) {
+                give(pPlayer, ItemInit.SUPER_FRUIT.get(), 8);
             }
             else if (value < 89 /* 4% chance*/) {
                 give(pPlayer, Items.TURTLE_HELMET, 1);

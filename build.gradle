@@ -16,7 +16,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.19-1.1.11'
+version = '1.19-1.1.12'
 group = 'com.gggame.randomthings'
 archivesBaseName = 'randomthings'
 
