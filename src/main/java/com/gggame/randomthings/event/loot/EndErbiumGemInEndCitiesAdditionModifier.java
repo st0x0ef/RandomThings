@@ -1,20 +1,6 @@
 package com.gggame.randomthings.event.loot;
 
-import com.google.gson.JsonObject;
-import it.unimi.dsi.fastutil.objects.ObjectArrayList;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.GsonHelper;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
-import net.minecraftforge.common.loot.LootModifier;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import javax.annotation.Nonnull;
-import java.util.Random;
-
+/*
 public class EndErbiumGemInEndCitiesAdditionModifier extends LootModifier {
     private final Item addition;
 
@@ -51,3 +37,5 @@ public class EndErbiumGemInEndCitiesAdditionModifier extends LootModifier {
         }
     }
 }
+
+ */

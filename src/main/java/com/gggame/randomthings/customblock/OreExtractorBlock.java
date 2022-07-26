@@ -70,7 +70,7 @@ public class OreExtractorBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if (entity instanceof OreExtractorBlockEntity) {
-                NetworkHooks.openGui(((ServerPlayer)pPlayer), (OreExtractorBlockEntity)entity, pPos);
+                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (OreExtractorBlockEntity)entity, pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
