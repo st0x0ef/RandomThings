@@ -26,7 +26,7 @@ this mod is disponible in :
 - French (fr_ca)
 
 ## forge requirement : 
-v1.1.15 -now : forge 41.1.0
+v1.1.15 - now : forge 41.1.0
 
 v1.1.13 - v1.1.14 : forge 41.0.109
 
