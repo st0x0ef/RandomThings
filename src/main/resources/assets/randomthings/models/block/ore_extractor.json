@@ -101,5 +101,6 @@
 		"fixed": {
 			"rotation": [0, 90, 0]
 		}
-	}
+	},
+	"render_type": "cutout"
 }
