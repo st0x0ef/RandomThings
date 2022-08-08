@@ -24,6 +24,7 @@ This mod add all the things you need to enhance your minecraft experience.
 this mod is disponible in :
 - English (en_us)
 - French (fr_ca)
+- Deutsch (de_de)
 
 ## forge requirement : 
 v1.2.0 : forge 42.0.1
