@@ -22,9 +22,9 @@ This mod add all the things you need to enhance your minecraft experience.
  
 ## language
 this mod is disponible in :
-- English (en_us)
-- French (fr_ca)
-- Deutsch (de_de)
+- English (en_us) 
+- French (fr_ca) (st0x0ef)
+- Deutsch (de_de) (Sl0ter)
 
 ## forge requirement : 
 v1.2.0 : forge 42.0.1
