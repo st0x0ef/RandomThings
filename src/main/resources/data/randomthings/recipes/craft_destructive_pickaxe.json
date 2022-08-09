@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "ABC",
+    " l ",
+    " l "
+  ],
+  "key":
+  {
+    "A":
+    {
+      "item": "randomthings:erbium_gem"
+    },
+    "B":
+    {
+      "item": "randomthings:nether_erbium_gem"
+    },
+    "C":
+    {
+      "item": "randomthings:end_erbium_gem"
+    },
+    "l":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "randomthings:destructive_pickaxe",
+    "count": 1
+  }
+}

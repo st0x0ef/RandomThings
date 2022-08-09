@@ -19,10 +19,6 @@ public class SuperFruitItem extends Item {
         super(pProperties);
     }
 
-    /**
-     * Called when the player finishes using this Item (E.g. finishes eating.). Not called when the player stops using
-     * the Item before the action is complete.
-     */
     public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pEntityLiving) {
         ItemStack itemstack = super.finishUsingItem(pStack, pLevel, pEntityLiving);
         if (!pLevel.isClientSide) {

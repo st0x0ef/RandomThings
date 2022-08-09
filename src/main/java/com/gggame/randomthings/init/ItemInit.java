@@ -53,6 +53,7 @@ public class ItemInit {
     public static final RegistryObject<HoeItem> UPGRADED_NETHERITE_HOE = register("upgraded_netherite_hoe", () -> new HoeItem(ItemMaterialInit.UPGRADED_NETHERITE, 2, 1f, new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
     public static final RegistryObject<ShovelItem> UPGRADED_NETHERITE_SHOVEL = register("upgraded_netherite_shovel", () -> new ShovelItem(ItemMaterialInit.UPGRADED_NETHERITE, 2, 1f, new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
 
+    public static final RegistryObject<PickaxeItem> DESTRUCTIVE_PICKAXE = register("destructive_pickaxe", () -> new PickaxeItem(ItemMaterialInit.DESTRUCTIVE, 99, 99f, new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_TOOL_AND_ARMOR_TAB)));
     // armor
     public static final RegistryObject<Item> SILVER_HELMET = register("silver_helmet",
             () -> new ArmorItem(BaseArmorMaterial.SILVER, EquipmentSlot.HEAD,

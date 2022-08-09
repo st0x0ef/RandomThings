@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "randomthings:random_item"
+    },
+    "title": "give me random things",
+    "description": "get a random item",
+    "background": "randomthings:textures/block/silver_block.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "randomthings:random_item",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "item": {
+          "items": [
+            "randomthings:random_item"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "randomthings:upgraded_netherite_ingot"
+      "item": "randomthings:random_item"
     },
-    "title": "Upgrade the best",
-    "description": "upgrade a netherite ingot",
+    "title": "give me random things",
+    "description": "get a random item",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
@@ -19,7 +19,7 @@
         "items": [
           {
             "items": [
-              "randomthings:upgraded_netherite_ingot"
+              "randomthings:random_item"
             ]
           }
         ]

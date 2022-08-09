@@ -3,7 +3,7 @@
     "icon": {
       "item": "randomthings:random_item"
     },
-    "title": "random things",
+    "title": "random things!",
     "description": "install random things",
     "frame": "task",
     "show_toast": false,

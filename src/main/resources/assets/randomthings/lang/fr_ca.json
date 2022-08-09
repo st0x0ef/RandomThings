@@ -122,5 +122,6 @@
   "block.randomthings.cherry_planks_stairs": "Escalier en planche de cerisier",
   "block.randomthings.maple_planks_slab": "Dalle en planche d'érable",
   "block.randomthings.maple_planks_stairs": "Escalier en planche d'érable",
-  "item.randomthings.super_fruit": "Super fruit"
+  "item.randomthings.super_fruit": "Super fruit",
+  "item.randomthings.destructive_pickaxe": "Pioche destructrice"
 }

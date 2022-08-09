@@ -12,6 +12,9 @@ public class ItemMaterialInit {
     public static final ForgeTier UPGRADED_NETHERITE = new ForgeTier(4, 3000, 9.0f,
             4.0f, 18, BlockTags.NEEDS_DIAMOND_TOOL,
             () -> Ingredient.of(Items.NETHERITE_INGOT));
+    public static final ForgeTier DESTRUCTIVE = new ForgeTier(99, 30, 9999f,
+            4.0f, 0, BlockTags.NEEDS_DIAMOND_TOOL,
+            () -> Ingredient.of(ItemInit.END_ERBIUM_GEM.get()));
 
     private ItemMaterialInit() {
 

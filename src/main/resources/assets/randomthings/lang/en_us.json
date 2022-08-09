@@ -122,5 +122,6 @@
   "block.randomthings.cherry_planks_stairs": "Cherry stairs",
   "block.randomthings.maple_planks_slab": "Maple slab",
   "block.randomthings.maple_planks_stairs": "Maple stairs",
-  "item.randomthings.super_fruit": "Super fruit"
+  "item.randomthings.super_fruit": "Super fruit",
+  "item.randomthings.destructive_pickaxe": "Destrcuctive pickaxe"
 }
