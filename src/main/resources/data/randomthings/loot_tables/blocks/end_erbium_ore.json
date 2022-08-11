@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "randomthings:nether_erbium_ore",
+              "name": "randomthings:end_erbium_ore",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",

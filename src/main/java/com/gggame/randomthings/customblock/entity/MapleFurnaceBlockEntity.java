@@ -70,7 +70,7 @@ public class MapleFurnaceBlockEntity extends BlockEntity implements MenuProvider
             }
 
             public int getCount() {
-                return 3;
+                return 4;
             }
         };
     }

@@ -31,13 +31,13 @@ public class ItemInit {
     public static final RegistryObject<Item> END_ERBIUM_PEARL = register("end_erbium_pearl", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
 
     public static final RegistryObject<Item> ERBIUM_RING_TIER_1 = register("erbium_ring_tier_1", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(30).rarity(Rarity.UNCOMMON), 1));
-    public static final RegistryObject<Item> ERBIUM_RING_TIER_2 = register("erbium_ring_tier_2", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(80).rarity(Rarity.UNCOMMON), 2));
-    public static final RegistryObject<Item> ERBIUM_RING_TIER_3 = register("erbium_ring_tier_3", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(150).rarity(Rarity.UNCOMMON), 3));
+    public static final RegistryObject<Item> ERBIUM_RING_TIER_2 = register("erbium_ring_tier_2", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(80).rarity(Rarity.RARE), 2));
+    public static final RegistryObject<Item> ERBIUM_RING_TIER_3 = register("erbium_ring_tier_3", () -> new ErbiumRingItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(150).rarity(Rarity.RARE), 3));
 
     public static final RegistryObject<Item> ERBIUM_CRYSTAL = register("erbium_crystal", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
 
     public static final RegistryObject<Item> SAP_SPOUT = register("sap_spout", () -> new SapSpoutItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(12)));
-    public static final RegistryObject<Item> RANDOM_ITEM = register("random_item", () -> new RandomItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(1)));
+    public static final RegistryObject<Item> RANDOM_ITEM = register("random_item", () -> new RandomItem(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB).durability(1).rarity(Rarity.UNCOMMON)));
 
     public static final RegistryObject<Item> COBBLE_NUGGET = register("cobble_nugget", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_OTHER_TAB)));
     // tool
@@ -132,7 +132,7 @@ public class ItemInit {
     public static final RegistryObject<Item> MAPLE_BUTTER = register("maple_butter",
             () -> new Item(new Item.Properties().food(FoodInit.MAPLE_BUTTER).tab(Main.RANDOMTHINGS_FOOD_TAB)));
     public static final RegistryObject<Item> SUPER_FRUIT = register("super_fruit",
-            () -> new SuperFruitItem(new Item.Properties().food(FoodInit.CHORUS_FRUIT).tab(Main.RANDOMTHINGS_FOOD_TAB)));
+            () -> new SuperFruitItem(new Item.Properties().food(FoodInit.CHORUS_FRUIT).tab(Main.RANDOMTHINGS_FOOD_TAB).stacksTo(16)));
 
 
 
