@@ -27,6 +27,8 @@ this mod is disponible in :
 - Deutsch (de_de) (Sl0ter)
 
 ## forge requirement : 
+v1.2.1 - now: forge 43.0.2
+
 v1.2.0 : forge 42.0.1
 
 v1.1.15 - v1.1.15.1 : forge 41.1.0
