@@ -15,6 +15,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -144,7 +145,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
             pBlockEntity.fuelTime--;
         }
 
-        if(hasRecipe(pBlockEntity)) {
+        if(hasRecipe(pBlockEntity) && canCraft(pBlockEntity)) {
             if(hasFuelInFuelSlot(pBlockEntity) && !isConsumingFuel(pBlockEntity)) {
                 pBlockEntity.consumeFuel();
                 setChanged(pLevel, pPos, pState);
@@ -164,6 +165,22 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
             pBlockEntity.resetProgress();
             setChanged(pLevel, pPos, pState);
         }
+    }
+
+    private static boolean canCraft(OreExtractorBlockEntity entity) {
+        if (getItem(entity, 2) == Items.AIR && getItem(entity, 3) == Items.AIR) return true;
+
+        else if (recipeId(entity) == 0) { if (getItem(entity, 2) == ItemInit.RAW_SILVER.get() && getItem(entity, 3) == Blocks.STONE.asItem()) { return true; } else return false; }
+        else if (recipeId(entity) == 1) { if (getItem(entity, 2) == ItemInit.RAW_SILVER.get() && getItem(entity, 3) == Blocks.DEEPSLATE.asItem()) { return true; } else return false; }
+        else if (recipeId(entity) == 2) { if (getItem(entity, 2) == Items.RAW_IRON.asItem() && getItem(entity, 3) == Blocks.STONE.asItem()) { return true; } else return false; }
+        else if (recipeId(entity) == 3) { if (getItem(entity, 2) == Items.RAW_IRON.asItem() && getItem(entity, 3) == Blocks.DEEPSLATE.asItem()) { return true; } else return false; }
+        else if (recipeId(entity) == 4) { if (getItem(entity, 2) == Items.RAW_COPPER.asItem() && getItem(entity, 3) == Blocks.STONE.asItem()) { return true; } else return false; }
+        else if (recipeId(entity) == 5) { if (getItem(entity, 2) == Items.RAW_COPPER.asItem() && getItem(entity, 3) == Blocks.DEEPSLATE.asItem()) { return true; } else return false; }
+        else if (recipeId(entity) == 6) { if (getItem(entity, 2) == Items.RAW_GOLD.asItem() && getItem(entity, 3) == Blocks.STONE.asItem()) { return true; } else return false; }
+        else if (recipeId(entity) == 7) { if (getItem(entity, 2) == Items.RAW_GOLD.asItem() && getItem(entity, 3) == Blocks.DEEPSLATE.asItem()) { return true; } else return false; }
+        else if (recipeId(entity) == 8) { if (getItem(entity, 2) == ItemInit.COBBLE_NUGGET.get() && getItem(entity, 3) == Blocks.STONE.asItem()) { return true; } else return false; }
+
+        return false;
     }
 
     private static void craftItem(OreExtractorBlockEntity entity) {
@@ -221,21 +238,25 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
     }
 
     private static boolean hasRecipe(OreExtractorBlockEntity entity) {
-        if(entity.itemHandler.getStackInSlot(1).getItem() == BlockInit.SILVER_ORE.get().asItem()) return true;
-        if(entity.itemHandler.getStackInSlot(1).getItem() == BlockInit.SILVER_ORE_DEEPSLATE.get().asItem()) return true;
+        if(getItem(entity, 1) == BlockInit.SILVER_ORE.get().asItem()) return true;
+        if(getItem(entity, 1) == BlockInit.SILVER_ORE_DEEPSLATE.get().asItem()) return true;
 
-        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.IRON_ORE.asItem()) return true;
-        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_IRON_ORE.asItem()) return true;
+        if(getItem(entity, 1) == Blocks.IRON_ORE.asItem()) return true;
+        if(getItem(entity, 1) == Blocks.DEEPSLATE_IRON_ORE.asItem()) return true;
 
-        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.COPPER_ORE.asItem()) return true;
-        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_COPPER_ORE.asItem()) return true;
+        if(getItem(entity, 1) == Blocks.COPPER_ORE.asItem()) return true;
+        if(getItem(entity, 1) == Blocks.DEEPSLATE_COPPER_ORE.asItem()) return true;
 
-        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.GOLD_ORE.asItem()) return true;
-        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.DEEPSLATE_GOLD_ORE.asItem()) return true;
+        if(getItem(entity, 1) == Blocks.GOLD_ORE.asItem()) return true;
+        if(getItem(entity, 1) == Blocks.DEEPSLATE_GOLD_ORE.asItem()) return true;
 
-        if(entity.itemHandler.getStackInSlot(1).getItem() == Blocks.COBBLESTONE.asItem()) return true;
+        if(getItem(entity, 1) == Blocks.COBBLESTONE.asItem()) return true;
 
         return false;
+    }
+
+    private static Item getItem(OreExtractorBlockEntity entity, int slot) {
+        return entity.itemHandler.getStackInSlot(slot).getItem();
     }
 
     private static int recipeId(OreExtractorBlockEntity entity) {
