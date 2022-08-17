@@ -25,8 +25,11 @@ this mod is disponible in :
 - English (en_us) 
 - French (fr_ca) (st0x0ef)
 - Deutsch (de_de) (Sl0ter)
+- Dutch (nl_nl & nl_be) (mich2002)
 
 ## forge requirement : 
+v1.2.1 - now: forge 43.0.2
+
 v1.2.0 : forge 42.0.1
 
 v1.1.15 - v1.1.15.1 : forge 41.1.0

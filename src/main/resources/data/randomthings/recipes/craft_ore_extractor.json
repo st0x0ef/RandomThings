@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "pattern":
   [
-    "BLB",
-    "BLB",
-    " C "
+    "C  ",
+    "BBB",
+    "L L"
   ],
   "key":
   {
@@ -14,11 +14,11 @@
     },
     "L":
     {
-      "item": "minecraft:iron_ingot"
+      "item": "randomthings:silver_ingot"
     },
     "C":
     {
-      "item": "minecraft:stone_slab"
+      "item": "minecraft:campfire"
     }
   },
   "result":
