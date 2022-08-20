@@ -14,7 +14,9 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -140,7 +142,7 @@ public class MapleFurnaceBlockEntity extends BlockEntity implements MenuProvider
             pBlockEntity.fuelTime--;
         }
 
-        if(hasRecipe(pBlockEntity)) {
+        if(hasRecipe(pBlockEntity) && canCraft(pBlockEntity)) {
             if(hasFuelInFuelSlot(pBlockEntity) && !isConsumingFuel(pBlockEntity)) {
                 pBlockEntity.consumeFuel();
                 setChanged(pLevel, pPos, pState);
@@ -190,6 +192,21 @@ public class MapleFurnaceBlockEntity extends BlockEntity implements MenuProvider
         if(entity.itemHandler.getStackInSlot(1).getItem() == ItemInit.MAPLE_SUGAR.get().asItem()) return true;
 
         return false;
+    }
+
+    private static boolean canCraft(MapleFurnaceBlockEntity entity) {
+        if (getItem(entity, 2) == Items.AIR) return true;
+
+        else if (recipeId(entity) == 0) { if (getItem(entity, 2) == ItemInit.MAPLE_SYRUP_BOTTLE.get()) { return true; } else return false; }
+        else if (recipeId(entity) == 1) { if (getItem(entity, 2) == ItemInit.MAPLE_TAFFY.get()) { return true; } else return false; }
+        else if (recipeId(entity) == 2) { if (getItem(entity, 2) == ItemInit.MAPLE_SUGAR.get()) { return true; } else return false; }
+        else if (recipeId(entity) == 3) { if (getItem(entity, 2) == ItemInit.MAPLE_BUTTER.get()) { return true; } else return false; }
+
+        return false;
+    }
+
+    private static Item getItem(MapleFurnaceBlockEntity entity, int slot) {
+        return entity.itemHandler.getStackInSlot(slot).getItem();
     }
 
     private static int recipeId(MapleFurnaceBlockEntity entity) {

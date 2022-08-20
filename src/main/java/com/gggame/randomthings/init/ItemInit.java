@@ -20,6 +20,7 @@ public class ItemInit {
 
     public static final RegistryObject<Item> SILVER_INGOT = register("silver_ingot", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
     public static final RegistryObject<Item> RAW_SILVER = register("raw_silver", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
+    public static final RegistryObject<Item> SILVER_NUGGET = register("silver_nugget", () -> new Item(new Item.Properties().tab(Main.RANDOMTHINGS_ORE_TAB)));
 
     public static final RegistryObject<Item> UPGRADED_NETHERITE_INGOT = register("upgraded_netherite_ingot", () -> new Item(new Item.Properties().fireResistant().tab(Main.RANDOMTHINGS_ORE_TAB)));
 
