@@ -24,7 +24,7 @@ This mod adds the following items:
  
 ## Languages
 This mod is available in the following languages:
-- English (en_us) 
+- English (en_us & en_uk) 
 - French (fr_ca) (st0x0ef)
 - Deutsch (de_de) (Sl0ter)
 - Dutch (nl_nl & nl_be) (mich2002)
