@@ -8,9 +8,9 @@ This mod adds all the things you need to enhance your Minecraft experience.
 This mod adds the following items:
 - Ore extractor
 - Maple and cherry tree
-- maple thing
+- maple things
 - 3 Erbium rings to add heart(s), add experience level(s), clear fire effect and clear potion effect
-- Erbium, Nether erbium and End erbium
+- Erbium, Nether erbium and End erbium armor
 - Upgraded Netherite tools and armor
 - Erbium potion to remove all effects (removed in 1.0.12)
 - Block of Degrade
