@@ -79,7 +79,7 @@ public class MapleFurnaceBlockEntity extends BlockEntity implements MenuProvider
 
     @Override
     public @NotNull Component getDisplayName() {
-        return Component.literal("Maple furnace");
+        return Component.translatable("block.randomthings.maple_furnace");
     }
 
     @Nullable

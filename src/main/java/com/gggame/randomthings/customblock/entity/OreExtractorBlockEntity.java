@@ -82,7 +82,7 @@ public class OreExtractorBlockEntity extends BlockEntity implements MenuProvider
 
     @Override
     public @NotNull Component getDisplayName() {
-        return Component.literal("Ore extractor");
+        return Component.translatable("block.randomthings.ore_extractor");
     }
 
     @Nullable
