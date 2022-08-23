@@ -7,6 +7,7 @@ This mod adds all the things you need to enhance your Minecraft experience.
 ## Features
 This mod adds the following items:
 - Ore extractor
+- Maple furnace
 - Maple and cherry tree
 - maple things
 - 3 Erbium rings to add heart(s), add experience level(s), clear fire effect and clear potion effect
@@ -24,7 +25,7 @@ This mod adds the following items:
  
 ## Languages
 This mod is available in the following languages:
-- English (en_us) 
+- English (en_us & en_uk) 
 - French (fr_ca) (st0x0ef)
 - Deutsch (de_de) (Sl0ter)
 - Dutch (nl_nl & nl_be) (mich2002)
