@@ -27,7 +27,7 @@ This mod adds the following items:
 This mod is available in the following languages:
 - English (en_us & en_uk) 
 - French (fr_ca) (st0x0ef)
-- Deutsch (de_de) (Sl0ter)
+- German (de_de) (Sl0ter)
 - Dutch (nl_nl & nl_be) (mich2002)
 - Finnish (fi_fi) (Dasuki)
 
